@@ -1,0 +1,32 @@
+---
+import type { ObservatoryModule } from "../../types/cyber";
+
+interface Props {
+	modules: ObservatoryModule[];
+}
+
+const { modules } = Astro.props;
+---
+
+<nav class="module-nav" aria-label="Observatory modules">
+	<p class="module-nav__label">Module index</p>
+	<div class="module-nav__rail">
+		{modules.map((module) => (
+			<button
+				type="button"
+				class:list={["module-tab", { "is-active": module.status === "active" }]}
+				aria-current={module.status === "active" ? "page" : undefined}
+				data-module-status={module.status}
+				data-module-key={module.key}
+				data-module-label={module.label}
+				title={module.label}
+			>
+				<span class="module-tab__index">{module.index}</span>
+				<span class="module-tab__copy">
+					<strong>{module.label}</strong>
+					<small>{module.statusLabel}</small>
+				</span>
+			</button>
+		))}
+	</div>
+</nav>

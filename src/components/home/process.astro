@@ -1,0 +1,113 @@
+---
+const steps = [
+	{
+		phase: "Discovery & Creative Brief",
+		title: "Deep-Dive & Vision",
+		description:
+			"I analyze your brand, brochure, and goals to map out a disruptive art direction and a unique visual identity.",
+		icon: "/sources/receiver.png",
+		alt: "Satellite receiver",
+	},
+	{
+		phase: "Architecture & Content Engine",
+		title: "Blueprint & SEO Strategy",
+		description:
+			"I define the site architecture, color tokens, and conversion-focused content inside a tailored design.md set up for search visibility.",
+		icon: "/sources/cube.png",
+		alt: "Wireframe cube",
+	},
+	{
+		phase: "AI-Assisted Precision Build",
+		title: "Section-by-Section Craft",
+		description:
+			"Combining advanced AI with hands-on art direction, I fine-tune every module for a 100% responsive, one-of-a-kind design.",
+		icon: "/sources/file.png",
+		alt: "AI design file",
+	},
+	{
+		phase: "Technical & LLM Optimization",
+		title: "Next-Gen Technical SEO",
+		description:
+			"I optimize code, sitemaps, and metadata—not just for traditional search engines, but for LLM indexing and AI discovery.",
+		icon: "/sources/artificial-intelligence.png",
+		alt: "Artificial intelligence network",
+	},
+	{
+		phase: "Edge Deployment & Feedback",
+		title: "Vercel Launch & Iterate",
+		description:
+			"I deploy your site on ultra-fast edge infrastructure for real-time client reviews, quick iterations, and a high-performance launch.",
+		icon: "/sources/space.png",
+		alt: "Space launch",
+	},
+];
+---
+
+<section id="process" class="process-section bg-dark px-5 py-[clamp(2.25rem,4vw,4rem)] sm:px-8 lg:px-12" aria-labelledby="process-title">
+	<div class="mx-auto w-full max-w-[1600px]">
+		<h2 id="process-title" class="flex items-baseline gap-4 font-title text-[clamp(1.25rem,2vw,1.75rem)] font-normal uppercase tracking-[0.08em]">
+			<span class="text-signal-blue">/01</span>
+			<span class="text-grey">The Process</span>
+		</h2>
+
+		<div class="process-grid mt-[clamp(2.5rem,5vw,5rem)] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
+			{steps.map((step, index) => (
+				<article class="process-step py-7 sm:px-6 lg:px-[clamp(1rem,1.6vw,1.75rem)] lg:py-3">
+					<div class="flex items-start gap-4">
+						<img
+							alt={step.alt}
+							class="size-14 shrink-0 object-contain opacity-90"
+							decoding="async"
+							height="256"
+							loading="lazy"
+							src={step.icon}
+							width="256"
+						/>
+
+						<div class="min-w-0 font-accent font-normal">
+							<p class="text-[0.68rem] uppercase leading-tight tracking-[0.12em] text-grey/65">
+								{String(index + 1).padStart(2, "0")} / {step.phase}
+							</p>
+							<h3 class="mt-2 text-[clamp(1rem,1.25vw,1.2rem)] font-normal uppercase leading-[1.1] tracking-[0.05em] text-electric-lime">
+								{step.title}
+							</h3>
+						</div>
+					</div>
+
+					<p class="mt-6 max-w-[28rem] font-accent text-[0.98rem] font-normal leading-relaxed text-grey/80">
+						{step.description}
+					</p>
+				</article>
+			))}
+		</div>
+	</div>
+</section>
+
+<style>
+	.process-section {
+		border-top: 0.2px solid var(--color-grey);
+		border-bottom: 0.2px solid var(--color-grey);
+		background-color: var(--color-section-surface);
+	}
+
+	.process-step + .process-step {
+		border-top: 0.5px solid rgb(210 239 40 / 18%);
+	}
+
+	@media (min-width: 640px) and (max-width: 1023px) {
+		.process-step:nth-child(even) {
+			border-left: 0.5px solid rgb(210 239 40 / 18%);
+		}
+
+		.process-step:nth-child(2) {
+			border-top: 0;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.process-step + .process-step {
+			border-top: 0;
+			border-left: 0.5px solid rgb(210 239 40 / 18%);
+		}
+	}
+</style>

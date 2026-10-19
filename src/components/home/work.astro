@@ -1,0 +1,731 @@
+---
+const designs = [
+	{
+		index: "01",
+		category: "Corporate systems",
+		title: "Professional Enterprise",
+		description:
+			"Clean, high-trust layouts engineered for corporate authority. Built on dynamic Bento Grids with subtle micro-interactions to balance formal credibility with modern visual energy.",
+		accent: true,
+	},
+	{
+		index: "02",
+		category: "Interface direction",
+		title: "Frosted Touch & Glassmorphism",
+		description:
+			"Apple-inspired interface aesthetics driven by translucent layers, soft Gaussian blurs, and razor-thin borders. Delivers a tactile sense of depth and effortless sophistication.",
+		accent: false,
+	},
+	{
+		index: "03",
+		category: "Technology / security",
+		title: "Neofuturistic Dark Mode",
+		description:
+			"Dark Mode 2.0 blending true blacks with vibrant neon accents. Features fine grid alignments, monospaced typography, and high-contrast micro-animations for a sharp tech presence.",
+		accent: true,
+	},
+	{
+		index: "04",
+		category: "Editorial experience",
+		title: "High-Impact Editorial",
+		description:
+			"Typography-led digital design focused on fluid scaling, bold layouts, and tailored visual hierarchy. Perfect for storytelling, branding, and content-first experiences.",
+		accent: false,
+	},
+];
+
+const activeDesign = designs[0];
+---
+
+<section id="work" class="work-section" aria-labelledby="work-title">
+	<div class="work-shell">
+		<header class="work-header">
+			<h2 id="work-title" class="work-title">
+				<span>/02</span>
+				<strong>Different Designs, Different Targets</strong>
+			</h2>
+
+			<p class="work-register" aria-label="Four selected design directions">
+				<span>Selected work</span>
+				<span>04 directions</span>
+			</p>
+		</header>
+
+		<div class="work-layout">
+			<aside class="work-intro" aria-label="Introduction to selected work">
+				<span class="intro-label">Design systems / 04</span>
+				<h3>Designed around the target, not the trend.</h3>
+				<p>
+					Four visual directions shaped for different audiences, goals and digital contexts. Select a system to inspect its approach.
+				</p>
+			</aside>
+
+			<article class="work-card work-card-active" data-active-card aria-live="polite">
+				<header class="card-register">
+					<span class="card-index" data-active-index>/{activeDesign.index}</span>
+					<span class="card-category" data-active-category>{activeDesign.category}</span>
+					<span class="card-status card-status-selected">
+						<span class="status-dot" aria-hidden="true"></span>
+						Selected
+					</span>
+				</header>
+
+				<div class="work-visual">
+					<img
+						alt="Vista previa de un diseño web cyberpunk del portafolio"
+						class="work-image work-image-main"
+						decoding="async"
+						height="920"
+						loading="lazy"
+						src="/sources/example portfolio.jpg"
+						width="736"
+					/>
+					<img
+						alt=""
+						aria-hidden="true"
+						class="work-image work-image-glitch"
+						height="920"
+						src="/sources/example portfolio.jpg"
+						width="736"
+					/>
+					<span class="work-scanlines" aria-hidden="true"></span>
+					<span class="visual-code" data-active-code aria-hidden="true">WEB_{activeDesign.index}</span>
+				</div>
+
+				<div class="card-content">
+					<h3 class:list={["card-title", activeDesign.accent && "card-title-accent"]} data-active-title tabindex="-1">
+						{activeDesign.title}
+					</h3>
+					<p data-active-description>{activeDesign.description}</p>
+				</div>
+
+				<footer class="card-footer">
+					<span>Web experience</span>
+					<button class="terminal-button" type="button" data-show-more>
+						<span class="terminal-button__face"><span aria-hidden="true">&gt;_</span> Show more</span>
+					</button>
+				</footer>
+			</article>
+
+			<nav class="work-selector" aria-label="Select a featured design">
+				<p class="selector-label">Select another direction</p>
+				<ol class="selector-list" role="list">
+					{designs.map((design, index) => (
+						<li hidden={index === 0} data-selector-item>
+							<button
+								class="compact-card terminal-button terminal-button--selector"
+								type="button"
+								data-accent={String(design.accent)}
+								data-category={design.category}
+								data-description={design.description}
+								data-index={design.index}
+								data-title={design.title}
+								aria-label={`Select ${design.title}`}
+							>
+								<span class="terminal-button__face">
+								<span class="compact-register">
+									<span class="compact-index">/{design.index}</span>
+									<span>{design.category}</span>
+								</span>
+								<span class:list={["compact-title", design.accent && "compact-title-accent"]}>
+									<span aria-hidden="true">&gt;_</span> {design.title}
+								</span>
+								<span class="compact-action">
+									<span class="status-dot" aria-hidden="true"></span>
+									Select now
+								</span>
+								</span>
+							</button>
+						</li>
+					))}
+				</ol>
+			</nav>
+		</div>
+	</div>
+</section>
+
+<script>
+	const workSection = document.querySelector<HTMLElement>("#work");
+
+	if (workSection) {
+		const activeIndex = workSection.querySelector<HTMLElement>("[data-active-index]");
+		const activeCategory = workSection.querySelector<HTMLElement>("[data-active-category]");
+		const activeTitle = workSection.querySelector<HTMLElement>("[data-active-title]");
+		const activeDescription = workSection.querySelector<HTMLElement>("[data-active-description]");
+		const activeCode = workSection.querySelector<HTMLElement>("[data-active-code]");
+		const showMore = workSection.querySelector<HTMLButtonElement>("[data-show-more]");
+		const selectorItems = Array.from(workSection.querySelectorAll<HTMLElement>("[data-selector-item]"));
+
+		const selectDesign = (button: HTMLButtonElement) => {
+			const { index, category, title, description, accent } = button.dataset;
+
+			if (!index || !category || !title || !description || !activeIndex || !activeCategory || !activeTitle || !activeDescription || !activeCode) {
+				return;
+			}
+
+			activeIndex.textContent = `/${index}`;
+			activeCategory.textContent = category;
+			activeTitle.textContent = title;
+			activeDescription.textContent = description;
+			activeCode.textContent = `WEB_${index}`;
+			activeTitle.classList.toggle("card-title-accent", accent === "true");
+			showMore?.setAttribute("aria-label", `Show more about ${title}`);
+
+			selectorItems.forEach((item) => {
+				const itemButton = item.querySelector<HTMLButtonElement>(".compact-card");
+				item.hidden = itemButton?.dataset.index === index;
+			});
+
+			activeTitle.focus({ preventScroll: true });
+		};
+
+		workSection.querySelectorAll<HTMLButtonElement>(".compact-card").forEach((button) => {
+			button.addEventListener("click", () => selectDesign(button));
+		});
+	}
+</script>
+
+<style>
+	.work-section {
+		--work-bg: var(--color-section-surface);
+		--work-surface: #0d100e;
+		--work-elevated: #151916;
+		--work-border: rgb(226 226 228 / 42%);
+		--work-muted: rgb(226 226 228 / 68%);
+		--work-accent: var(--color-electric-lime);
+		overflow: hidden;
+		border-block: 0.5px solid var(--work-border);
+		background: var(--work-bg);
+		padding: clamp(1.75rem, 2.6vw, 2.5rem) clamp(1.25rem, 3vw, 3rem);
+	}
+
+	.work-shell {
+		width: min(100%, 1600px);
+		margin-inline: auto;
+	}
+
+	.work-header {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) auto;
+		align-items: end;
+		gap: 2rem;
+		padding-bottom: clamp(1rem, 1.8vw, 1.5rem);
+		border-bottom: 1px solid var(--work-border);
+	}
+
+	.work-title {
+		display: flex;
+		align-items: baseline;
+		gap: clamp(0.75rem, 1.6vw, 1.5rem);
+		margin: 0;
+		font-family: var(--font-title);
+		font-size: clamp(1.25rem, 2.15vw, 2rem);
+		font-weight: 400;
+		line-height: 1.15;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+	}
+
+	.work-title span {
+		color: var(--color-signal-blue);
+	}
+
+	.card-index,
+	.card-title-accent,
+	.compact-index,
+	.compact-title-accent {
+		color: var(--work-accent);
+	}
+
+	.work-title strong {
+		max-width: 26ch;
+		color: var(--color-grey);
+		font-weight: 400;
+	}
+
+	.work-register {
+		display: flex;
+		gap: 1rem;
+		margin: 0;
+		color: var(--work-muted);
+		font-family: var(--font-accent);
+		font-size: 0.75rem;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+	}
+
+	.work-intro {
+		display: grid;
+		align-content: center;
+		gap: 0.9rem;
+		padding: clamp(1rem, 2vw, 1.75rem);
+		border-left: 1px solid var(--work-border);
+	}
+
+	.intro-label {
+		color: var(--work-accent);
+		font-family: var(--font-accent);
+		font-size: 0.75rem;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+	}
+
+	.work-intro h3 {
+		max-width: 18ch;
+		margin: 0;
+		color: var(--color-grey);
+		font-family: var(--font-title);
+		font-size: clamp(1.2rem, 1.8vw, 1.65rem);
+		font-weight: 500;
+		line-height: 1.25;
+		letter-spacing: 0.025em;
+		text-transform: uppercase;
+	}
+
+	.work-intro p {
+		max-width: 38ch;
+		margin: 0;
+		color: var(--work-muted);
+		font-family: var(--font-body);
+		font-size: 1rem;
+		line-height: 1.55;
+	}
+
+	.work-register span + span::before {
+		margin-right: 1rem;
+		color: var(--work-accent);
+		content: "//";
+	}
+
+	.work-layout {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		align-items: stretch;
+		gap: clamp(1rem, 2vw, 1.5rem);
+		margin-top: clamp(1rem, 1.8vw, 1.5rem);
+	}
+
+	.work-card {
+		position: relative;
+		border: 1px solid var(--work-border);
+		background: var(--work-surface);
+	}
+
+	.work-card::before,
+	.work-card::after {
+		position: absolute;
+		z-index: 5;
+		width: 1.1rem;
+		height: 1.1rem;
+		content: "";
+		pointer-events: none;
+	}
+
+	.work-card::before {
+		top: -1px;
+		left: -1px;
+		border-top: 2px solid var(--work-accent);
+		border-left: 2px solid var(--work-accent);
+	}
+
+	.work-card::after {
+		right: -1px;
+		bottom: -1px;
+		border-right: 2px solid var(--work-accent);
+		border-bottom: 2px solid var(--work-accent);
+	}
+
+	.work-card-active {
+		display: flex;
+		min-width: 0;
+		flex-direction: column;
+		border-color: var(--work-accent);
+		box-shadow: 4px 4px 0 var(--work-accent), 0 16px 38px rgb(1 2 7 / 45%);
+		transition: transform 180ms ease;
+	}
+
+	.card-register,
+	.card-footer {
+		display: grid;
+		align-items: center;
+		font-family: var(--font-accent);
+		font-size: 0.75rem;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+	}
+
+	.card-register {
+		grid-template-columns: auto 1fr auto;
+		gap: 0.9rem;
+		min-height: 2.9rem;
+		padding: 0.65rem 1rem;
+		border-bottom: 1px solid var(--work-border);
+		color: var(--work-muted);
+	}
+
+	.card-index {
+		font-weight: 700;
+	}
+
+	.card-category {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.card-status,
+	.compact-action {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.45rem;
+		white-space: nowrap;
+	}
+
+	.card-status-selected {
+		color: var(--work-accent);
+	}
+
+	.status-dot {
+		display: inline-block;
+		width: 0.42rem;
+		aspect-ratio: 1;
+		flex: none;
+		border-radius: 50%;
+		background: currentColor;
+	}
+
+	.card-status-selected .status-dot {
+		box-shadow: 0 0 8px currentColor;
+		animation: selected-pulse 1.15s ease-in-out infinite;
+	}
+
+	.work-visual {
+		position: relative;
+		height: clamp(8.5rem, 11vw, 10.5rem);
+		overflow: hidden;
+		border-bottom: 1px solid var(--work-border);
+		background: var(--color-blue);
+	}
+
+	.work-image {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center 34%;
+		filter: saturate(0.8) contrast(1.08);
+		transition: transform 420ms cubic-bezier(0.2, 0.8, 0.2, 1), filter 180ms ease;
+	}
+
+	.work-image-glitch {
+		position: absolute;
+		inset: 0;
+		opacity: 0;
+		filter: contrast(1.45) saturate(1.65) hue-rotate(58deg);
+		mix-blend-mode: screen;
+		pointer-events: none;
+	}
+
+	.work-scanlines {
+		position: absolute;
+		inset: 0;
+		background: repeating-linear-gradient(to bottom, transparent 0, transparent 3px, rgb(1 2 7 / 16%) 4px);
+		pointer-events: none;
+	}
+
+	.visual-code {
+		position: absolute;
+		right: 0.75rem;
+		bottom: 0.65rem;
+		padding: 0.25rem 0.45rem;
+		border: 1px solid rgb(193 250 11 / 46%);
+		background: rgb(1 2 7 / 78%);
+		color: var(--work-accent);
+		font-family: var(--font-accent);
+		font-size: 0.7rem;
+		letter-spacing: 0.12em;
+	}
+
+	.card-content {
+		display: grid;
+		align-content: start;
+		gap: 0.55rem;
+		padding: clamp(0.85rem, 1.5vw, 1.15rem);
+	}
+
+	.card-title,
+	.compact-title {
+		margin: 0;
+		font-family: var(--font-title);
+		font-weight: 500;
+		line-height: 1.2;
+		letter-spacing: 0.035em;
+		text-transform: uppercase;
+	}
+
+	.card-title {
+		max-width: 24ch;
+		color: var(--color-grey);
+		font-size: clamp(1.05rem, 1.35vw, 1.3rem);
+		outline: none;
+	}
+
+	.card-content p {
+		display: -webkit-box;
+		max-width: 66ch;
+		overflow: hidden;
+		margin: 0;
+		color: var(--work-muted);
+		font-family: var(--font-body);
+		font-size: 0.95rem;
+		line-height: 1.5;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+	}
+
+	.card-footer {
+		grid-template-columns: 1fr auto;
+		gap: 1rem;
+		margin-top: auto;
+		padding: 0.5rem clamp(0.85rem, 1.5vw, 1.15rem);
+		border-top: 1px solid var(--work-border);
+		background: var(--work-elevated);
+		color: var(--work-muted);
+	}
+
+
+
+
+	.work-card-active:hover {
+		transform: translateY(-4px);
+	}
+
+	.work-card-active:hover .work-image-main {
+		filter: saturate(1.08) contrast(1.16);
+		transform: scale(1.045);
+	}
+
+	.work-card-active:hover .work-image-glitch {
+		animation: work-glitch 640ms steps(1, end) 1;
+	}
+
+	.work-selector {
+		display: flex;
+		min-width: 0;
+		flex-direction: column;
+		border-left: 1px solid var(--work-border);
+		padding-left: clamp(1rem, 2vw, 1.5rem);
+	}
+
+	.selector-label {
+		margin: 0 0 0.75rem;
+		color: var(--work-muted);
+		font-family: var(--font-accent);
+		font-size: 0.75rem;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+	}
+
+	.selector-list {
+		display: grid;
+		min-height: 0;
+		flex: 1;
+		grid-template-rows: repeat(3, minmax(0, 1fr));
+		gap: clamp(0.75rem, 1.4vw, 1rem);
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.selector-list li {
+		min-height: 0;
+	}
+
+
+	.compact-register {
+		display: flex;
+		grid-column: 1 / -1;
+		gap: 0.75rem;
+		color: var(--work-muted);
+		font-family: var(--font-accent);
+		font-size: 0.75rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+	}
+
+	.compact-register span:last-child {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.compact-title {
+		color: var(--color-grey);
+		font-size: clamp(1rem, 1.4vw, 1.25rem);
+	}
+
+	.compact-action {
+		align-self: end;
+		color: var(--work-muted);
+		font-family: var(--font-accent);
+		font-size: 0.72rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+	}
+
+
+
+	@keyframes selected-pulse {
+		0%,
+		100% {
+			opacity: 1;
+		}
+
+		50% {
+			opacity: 0.25;
+		}
+	}
+
+	@keyframes work-glitch {
+		0%,
+		100% {
+			opacity: 0;
+			clip-path: inset(0 0 100% 0);
+			transform: translate(0);
+		}
+
+		18% {
+			opacity: 0.65;
+			clip-path: inset(11% 0 64% 0);
+			transform: translate(9px, -2px);
+		}
+
+		42% {
+			opacity: 0.42;
+			clip-path: inset(55% 0 20% 0);
+			transform: translate(-8px, 1px);
+		}
+
+		68% {
+			opacity: 0.72;
+			clip-path: inset(76% 0 8% 0);
+			transform: translate(6px, -1px);
+		}
+	}
+
+	@media (max-width: 1023px) {
+		.work-layout {
+			grid-template-columns: minmax(13rem, 0.8fr) minmax(0, 1.2fr);
+		}
+
+		.work-intro {
+			grid-column: 1 / -1;
+			grid-template-columns: auto minmax(0, 1fr);
+			align-items: start;
+			border-bottom: 1px solid var(--work-border);
+		}
+
+		.work-intro h3 {
+			grid-column: 1;
+		}
+
+		.work-intro p {
+			grid-column: 2;
+			grid-row: 1 / span 2;
+		}
+
+		.compact-card {
+			grid-template-columns: 1fr;
+		}
+
+		.compact-action {
+			align-self: auto;
+		}
+	}
+
+	@media (max-width: 767px) {
+		.work-header,
+		.work-layout {
+			grid-template-columns: minmax(0, 1fr);
+		}
+
+		.work-header {
+			gap: 1rem;
+		}
+
+		.work-title {
+			align-items: flex-start;
+		}
+
+		.work-register {
+			justify-content: space-between;
+		}
+
+		.work-selector {
+			border-top: 1px solid var(--work-border);
+			border-left: 0;
+			padding-top: 1.25rem;
+			padding-left: 0;
+		}
+
+		.work-intro {
+			grid-template-columns: minmax(0, 1fr);
+			border-bottom: 0;
+		}
+
+		.work-intro h3,
+		.work-intro p {
+			grid-column: auto;
+			grid-row: auto;
+		}
+
+		.selector-list {
+			grid-template-rows: none;
+		}
+
+		.compact-card {
+			min-height: 7rem;
+			grid-template-columns: minmax(0, 1fr) auto;
+		}
+	}
+
+	@media (max-width: 479px) {
+		.work-title {
+			flex-direction: column;
+		}
+
+		.card-register {
+			grid-template-columns: auto minmax(0, 1fr);
+		}
+
+		.card-status-selected {
+			grid-column: 1 / -1;
+		}
+
+		.card-footer {
+			grid-template-columns: minmax(0, 1fr);
+		}
+
+		.compact-card {
+			grid-template-columns: minmax(0, 1fr);
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.card-status-selected .status-dot,
+		.work-card-active:hover .work-image-glitch {
+			animation: none;
+		}
+
+		.work-card-active,
+		.work-image,
+		.compact-card {
+			transition: none;
+		}
+
+		.work-card-active:hover,
+		.work-card-active:hover .work-image-main {
+			transform: none;
+		}
+	}
+</style>

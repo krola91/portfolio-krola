@@ -1,0 +1,127 @@
+<nav
+	aria-label="Barra de estado"
+	data-component="navbar"
+	class="absolute inset-x-0 top-0 z-50 w-full overflow-hidden bg-transparent px-5 py-5 text-lime"
+>
+	<div
+		class="grid grid-cols-[minmax(0,15fr)_minmax(0,70fr)_minmax(0,15fr)] items-center gap-3"
+	>
+		<div class="flex min-w-0 items-center gap-2">
+			<svg
+				aria-hidden="true"
+				class="size-4 shrink-0 text-lime sm:size-[18px]"
+				fill="none"
+				viewBox="0 0 20 20"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<circle cx="10" cy="10" r="3" stroke="currentColor" stroke-width="1" />
+				<path
+					d="M10 .75v5M10 14.25v5M.75 10h5M14.25 10h5"
+					stroke="currentColor"
+					stroke-linecap="round"
+					stroke-width="1"
+				/>
+				<circle cx="10" cy="10" r="1" fill="currentColor" />
+			</svg>
+			<span class="min-w-0 overflow-hidden whitespace-nowrap text-[9px] font-normal uppercase leading-none sm:text-[10px]">
+				<span class="sr-only">AI WEB DESIGNER - CYBERSEC</span>
+				<span
+					aria-hidden="true"
+					class="scramble"
+					data-scramble
+					data-text="AI WEB DESIGNER - CYBERSEC"
+				>
+					AI WEB DESIGNER - CYBERSEC
+				</span>
+			</span>
+		</div>
+
+		<div class="flex min-w-0 items-center px-1 sm:px-2 md:px-3" aria-hidden="true">
+    <div class="h-[0.8px] w-full bg-grey"></div>
+</div>
+
+		<div class="flex min-w-0 items-center justify-end gap-2">
+			<span
+				class="truncate text-right font-body text-[8px] font-normal uppercase leading-none tracking-[0.08em] sm:text-[10px] sm:tracking-[0.14em]"
+			>
+				AVAILABLE FOR FREELANCE
+			</span>
+			<span
+				aria-hidden="true"
+				class="availability-indicator block size-1.5 shrink-0 rounded-full bg-lime"
+			></span>
+		</div>
+	</div>
+</nav>
+
+<style>
+	.scramble {
+		font-family: monospace;
+		letter-spacing: 0.02em;
+	}
+
+	@keyframes availability-blink {
+		0%,
+		100% {
+			opacity: 1;
+		}
+
+		50% {
+			opacity: 0.18;
+		}
+	}
+
+	.availability-indicator {
+		animation: availability-blink 1s ease-in-out infinite;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.availability-indicator {
+			animation: none;
+		}
+	}
+</style>
+
+<script>
+	const scrambleGlyphs = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789<>/[]{}#%&*";
+	const reduceScrambleMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+	document.querySelectorAll<HTMLElement>("[data-scramble]").forEach((element) => {
+		if (element.dataset.scrambleReady === "true") return;
+
+		const text = element.dataset.text ?? element.textContent?.trim() ?? "";
+		element.dataset.scrambleReady = "true";
+
+		if (reduceScrambleMotion) {
+			element.textContent = text;
+			return;
+		}
+
+		const runScramble = () => {
+			let frame = 0;
+			const framesPerCharacter = 3;
+
+			const interval = window.setInterval(() => {
+				const lockedCharacters = Math.floor(frame / framesPerCharacter);
+
+				element.textContent = [...text]
+					.map((character, index) => {
+						if (character === " ") return " ";
+						if (index < lockedCharacters) return character;
+						return scrambleGlyphs[Math.floor(Math.random() * scrambleGlyphs.length)];
+					})
+					.join("");
+
+				frame += 1;
+
+				if (lockedCharacters >= text.length) {
+					window.clearInterval(interval);
+					element.textContent = text;
+					window.setTimeout(runScramble, 3600);
+				}
+			}, 42);
+		};
+
+		runScramble();
+	});
+</script>

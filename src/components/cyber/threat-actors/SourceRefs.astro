@@ -1,0 +1,8 @@
+---
+import { ACTOR_SOURCE_BY_ID } from "../../../data/cyber/threat-actors/sources";
+interface Props { ids: readonly string[]; }
+const { ids } = Astro.props;
+---
+<span class="actor-source-refs" aria-label="Claim sources">
+	{ids.map((id) => { const source = ACTOR_SOURCE_BY_ID.get(id); return source && <a href={source.url} target="_blank" rel="noopener noreferrer" aria-label={`Source: ${source.title}`}>{source.kind} ↗</a>; })}
+</span>

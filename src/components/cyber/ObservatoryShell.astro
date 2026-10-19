@@ -1,0 +1,52 @@
+---
+import datasetJson from "../../data/cyber/generated/cisa-kev.json";
+import { observatoryModules } from "../../data/cyber/observatory-modules";
+import { getDatasetIntegrity } from "../../lib/cyber/dataset-health";
+import type { KevDataset } from "../../types/cyber";
+import "../../styles/cyber-observatory.css";
+import "../../styles/threat-actors.css";
+import CommandPalette from "./CommandPalette.astro";
+import CveInspector from "./CveInspector.astro";
+import ExplainerPopover from "./education/ExplainerPopover.astro";
+import ObservatoryHeader from "./ObservatoryHeader.astro";
+import ObservatoryNavigation from "./ObservatoryNavigation.astro";
+import VulnerabilityDashboard from "./vulnerability/VulnerabilityDashboard.astro";
+import ThreatActorDashboard from "./threat-actors/ThreatActorDashboard.astro";
+
+const dataset = datasetJson as KevDataset;
+const health = getDatasetIntegrity(dataset.metadata);
+---
+
+<section class="observatory" data-observatory>
+	<a class="skip-link" href="#actor-index-title">Skip to active module</a>
+	<div class="ambient-grid" aria-hidden="true"></div>
+	<ObservatoryHeader metadata={dataset.metadata} health={health} />
+	<ObservatoryNavigation modules={observatoryModules} />
+	<main class="observatory-main">
+		<div data-module-view="actors"><ThreatActorDashboard /></div>
+		<div data-module-view="vulnerabilities" hidden><VulnerabilityDashboard dataset={dataset} health={health} /></div>
+	</main>
+	<CveInspector sourceUrl={dataset.metadata.sourceUrl} />
+	<ExplainerPopover />
+	<CommandPalette />
+	<div class="system-toast" role="status" aria-live="polite" data-system-toast hidden></div>
+
+	<div class="boot-sequence" data-boot-sequence aria-live="polite">
+		<div class="boot-sequence__terminal">
+			<div class="boot-sequence__brand"><span aria-hidden="true"><i></i><i></i></span><strong>Cyber Intelligence Observatory</strong></div>
+			<p data-boot-message>VERIFYING LOCAL EVIDENCE REGISTRIES...</p>
+			<div class="boot-progress"><i data-boot-progress></i></div>
+			<ul>
+				<li data-boot-step="0">Verifying curated official records</li>
+				<li data-boot-step="1">Indexing actor dossiers and KEV evidence</li>
+				<li data-boot-step="2">Checking claim provenance</li>
+				<li data-boot-step="3">Observatory ready</li>
+			</ul>
+			<button type="button" data-boot-skip>Skip diagnostic</button>
+		</div>
+	</div>
+</section>
+
+<script>
+	import "../../scripts/cyber-observatory";
+</script>

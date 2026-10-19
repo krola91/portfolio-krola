@@ -1,0 +1,43 @@
+---
+import type { ThreatActor } from "../../../types/threat-actors";
+import { ACTOR_SOURCE_BY_ID } from "../../../data/cyber/threat-actors/sources";
+import { actorHash } from "../../../lib/cyber/threat-actors/actor-navigation";
+import { legalLabel } from "../../../lib/cyber/threat-actors/actor-statistics";
+import ActorPortrait from "./ActorPortrait.astro";
+import SourceRefs from "./SourceRefs.astro";
+interface Props { actor: ThreatActor; }
+const { actor } = Astro.props;
+const linked = actor.associations.find((edge) => ["GROUP", "MALWARE", "CAMPAIGN"].includes(edge.kind));
+const mainOperation = actor.operations.find((event) => event.assertion === "ALLEGED") ?? actor.operations.find((event) => event.assertion === "PLEADED_GUILTY") ?? actor.operations[0];
+const sources = actor.sourceIds.map((id) => ACTOR_SOURCE_BY_ID.get(id)!);
+const convicted = actor.legalStatus.includes("CONVICTED");
+---
+<article class:list={["actor-ledger-panel", { "is-convicted": convicted }]} id={`actor-panel-${actor.id}`} role="tabpanel" aria-labelledby={`actor-tab-${actor.id}`} data-actor-panel={actor.id} hidden={actor.index !== 1} tabindex="0">
+	<nav class="ledger-tools" aria-label={`Record tools for ${actor.displayName}`}>
+		<a href={actorHash(actor.id)} data-actor-open={actor.id} aria-label={`Open dossier for ${actor.displayName}`} title="Open full dossier"><span aria-hidden="true">▤</span><small>FILE</small></a>
+		<a href={actorHash(actor.id, "story")} aria-label={`Read documented story of ${actor.displayName}`} title="Read documented story"><span aria-hidden="true">≡</span><small>STORY</small></a>
+		<a href={actorHash(actor.id, "legal")} aria-label={`Legal record for ${actor.displayName}`} title="Legal record"><span aria-hidden="true">⚖</span><small>LEGAL</small></a>
+		<a href={actorHash(actor.id, "sources")} aria-label={`Official sources for ${actor.displayName}`} title="Official sources"><span aria-hidden="true">↗</span><small>REFS</small></a>
+		<span class="ledger-tools__index" aria-hidden="true">{String(actor.index).padStart(2, "0")}/08</span>
+	</nav>
+	<aside class="ledger-archive" aria-label="Record identification">
+		<ActorPortrait actor={actor} context="ledger" />
+		<section class="ledger-block"><h3>IDENTITY REGISTER</h3><dl class="ledger-data"><div><dt>Record ID</dt><dd>ACT-{String(actor.index).padStart(3, "0")}</dd></div><div class="ledger-aliases"><dt>Recorded aliases</dt><dd>{actor.aliases.map((alias) => alias.value).join(" / ") || "No alias listed"}</dd></div><div><dt>Nationality</dt><dd>{actor.nationality?.value ?? "Not documented"}</dd></div></dl><SourceRefs ids={[...new Set([...actor.identitySourceIds, ...actor.aliases.flatMap((alias) => alias.sourceIds)])]} /></section>
+		<section class="ledger-block ledger-coverage"><h3>EVIDENCE COVERAGE</h3>{[{ label: "Official sources", count: actor.sourceIds.length }, { label: "Recorded aliases", count: actor.aliases.length }, { label: "Capabilities", count: actor.capabilities.length }].map((item) => <div><span>{item.label}</span><strong>{String(item.count).padStart(2, "0")}</strong><i style={`--coverage:${Math.min(item.count / 4, 1) * 100}%`} aria-hidden="true"></i></div>)}<p>Counts of cited entries.<br />Not a threat or risk score.</p></section>
+	</aside>
+	<div class="ledger-identity">
+		<header class="ledger-name"><p>HUMAN THREAT ACTOR // OFFICIAL RECORD {String(actor.index).padStart(2, "0")}</p><h2>{actor.displayName}</h2><p class="ledger-status">STATUS: {actor.legalStatus.map(legalLabel).join(" / ")}</p><p class="ledger-class">TYPE: {actor.classification.assertion === "ALLEGED" && "ALLEGED / "}{actor.classification.value}</p></header>
+		<div class="ledger-details">
+			<section class="ledger-block"><h3>IDENTIFICATION</h3><dl class="ledger-data"><div><dt>Activities</dt><dd>{actor.activities.join(" / ")}</dd></div><div><dt>Linked</dt><dd>{linked?.label ?? "Not documented"}{linked && <small>{legalLabel(linked.assertion)}</small>}</dd></div></dl><SourceRefs ids={actor.classification.sourceIds} /></section>
+			<section class="ledger-block"><h3>DOCUMENTED CASE</h3><strong class="ledger-case-name">{mainOperation?.label ?? "Not documented"}</strong><p>{mainOperation?.period}</p><span class="ledger-qualifier">{mainOperation && legalLabel(mainOperation.assertion)}</span>{mainOperation && <SourceRefs ids={mainOperation.sourceIds} />}</section>
+			<section class="ledger-block"><h3>TECHNICAL PROFILE</h3><ul class="ledger-capabilities">{actor.capabilities.map((capability) => <li><strong>{capability.label}</strong><span>{legalLabel(capability.assertion)}</span></li>)}</ul><SourceRefs ids={[...new Set(actor.capabilities.flatMap((claim) => claim.sourceIds))]} /></section>
+			<section class="ledger-block"><h3>RECORDED IMPACT</h3><p>{actor.documentedImpact.value}</p><span class="ledger-qualifier">{legalLabel(actor.documentedImpact.assertion)}</span><SourceRefs ids={actor.documentedImpact.sourceIds} /></section>
+		</div>
+		<footer class="ledger-identity__footer"><span>{convicted ? "JUDICIAL OUTCOME DOCUMENTED" : "ALLEGATIONS ≠ CONVICTION"}</span><a href={actorHash(actor.id)} data-actor-open={actor.id} aria-label={`Open dossier for ${actor.displayName}`}>OPEN DOSSIER <span aria-hidden="true">↗</span></a></footer>
+	</div>
+	<aside class="ledger-evidence" aria-label="Victim footprint and provenance">
+		<section class="ledger-block ledger-footprint"><h3>DOCUMENTED FOOTPRINT</h3><div class="ledger-terrain" aria-hidden="true"><svg viewBox="0 0 320 170" fill="none"><g class="ledger-terrain__grid"><path d="M0 34H320M0 68H320M0 102H320M0 136H320M40 0V170M80 0V170M120 0V170M160 0V170M200 0V170M240 0V170M280 0V170" /></g><g class="ledger-terrain__contours"><path d="M-20 110C12 42 61 156 100 78S169 16 193 67 249 117 282 48 326 50 340 29M-12 134C36 62 55 169 111 97S158 39 180 93 235 154 276 74 326 87 342 55M-8 72C38 7 75 114 110 49S182-12 213 38 256 75 288 13M20 170C45 104 72 187 127 119S174 65 198 127 261 180 298 102 336 119 350 89M-18 42C28-8 72 69 98 18S166-38 203 13M147 170C175 119 193 173 225 158S284 144 311 164" /></g><g class="ledger-terrain__reticle"><circle cx="166" cy="87" r="29"/><circle cx="166" cy="87" r="13"/><path d="M122 87H150M182 87H210M166 43V71M166 103V131"/><circle cx="166" cy="87" r="3"/></g></svg><span>EVIDENCE FIELD / ABSTRACT</span></div><p class="ledger-terrain-note">Schematic only — no live location tracking.</p><dl class="ledger-data">{actor.footprint.map((claim) => <div><dt>{claim.label}</dt><dd>{claim.value}<small>{legalLabel(claim.assertion)}</small></dd></div>)}</dl><SourceRefs ids={[...new Set(actor.footprint.flatMap((claim) => claim.sourceIds))]} /></section>
+		<section class="ledger-block ledger-provenance"><h3>OFFICIAL SOURCE REGISTER</h3><ul>{sources.map((source) => <li><a href={source.url} target="_blank" rel="noopener noreferrer" aria-label={`Official source: ${source.title}`} title={source.title}><strong>{source.kind}</strong><span>{source.publishedAt ?? "Undated notice"}</span><span aria-hidden="true">↗</span></a></li>)}</ul><p>Reviewed {actor.lastVerifiedAt} UTC.<br />Public records; not a current-custody feed.</p></section>
+	</aside>
+	<div class="ledger-edge" aria-hidden="true"><span>IDENTITY / EVIDENCE</span><span>PUBLIC RECORDS ONLY</span><span>ACTORDEX / 02</span></div>
+</article>

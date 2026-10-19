@@ -1,0 +1,19 @@
+---
+import type { ThreatActor } from "../../../types/threat-actors";
+import { ACTOR_SOURCE_BY_ID } from "../../../data/cyber/threat-actors/sources";
+import { getActorClaims } from "../../../lib/cyber/threat-actors/actor-statistics";
+import ExplainerTrigger from "../education/ExplainerTrigger.astro";
+interface Props { actors: readonly ThreatActor[]; id: string; headingLevel?: "h2" | "h3"; }
+const { actors, id, headingLevel: Heading = "h2" } = Astro.props;
+const ClaimHeading = Heading === "h2" ? "h3" : "h4";
+const ids = [...new Set(actors.flatMap((actor) => [...actor.sourceIds]))];
+---
+<section class="intel-panel actor-source-log" id={id} data-explainer-panel="actor-official-source" aria-labelledby={`${id}-title`}>
+	<header class="panel-heading"><div><p class="panel-kicker">SOURCE COVERAGE // {String(ids.length).padStart(2, "0")} RECORDS</p><Heading id={`${id}-title`}>Official source log</Heading></div><ExplainerTrigger explainerId="actor-official-source" label="Official source" /></header>
+	<div class="actor-source-log__list">
+		{ids.map((sourceId) => { const source = ACTOR_SOURCE_BY_ID.get(sourceId)!; const covered = actors.flatMap((actor) => getActorClaims(actor).filter((claim) => claim.sourceIds.includes(sourceId)).map((claim) => `${actor.displayName}: ${claim.label} [${claim.assertion.replaceAll("_", " ")}]`)); return <details>
+			<summary><span class="actor-source-kind">{source.kind}</span><span><strong>{source.title}</strong><small>{source.organization} · Consulted {source.accessedAt} UTC</small></span><span aria-hidden="true">+</span></summary>
+			<div class="actor-source-log__detail"><p>Published: {source.publishedAt ?? "Not listed / undated authority record"}</p><a href={source.url} target="_blank" rel="noopener noreferrer">READ OFFICIAL RECORD ↗</a><p class="actor-source-url">{source.url}</p><ClaimHeading>Claims supported</ClaimHeading><ul>{covered.map((item) => <li>{item}</li>)}</ul><p>Identity: {actors.filter((actor) => actor.identitySourceIds.includes(sourceId)).map((actor) => actor.displayName).join(" · ") || "See supported claims"}</p></div>
+		</details>; })}
+	</div>
+</section>

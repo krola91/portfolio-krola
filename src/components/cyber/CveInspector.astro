@@ -1,0 +1,27 @@
+---
+import ExplainerTrigger from "./education/ExplainerTrigger.astro";
+
+interface Props { sourceUrl: string; }
+const { sourceUrl } = Astro.props;
+---
+
+<div class="inspector-backdrop" data-inspector-backdrop hidden></div>
+<aside class="cve-inspector" aria-labelledby="inspector-title" aria-hidden="true" data-inspector data-explainer-panel="cve-inspector" data-explainer-category="inspector">
+	<header><div><p>Official KEV record</p><h2 id="inspector-title" data-inspector-cve>—</h2></div><div class="inspector-header__actions"><ExplainerTrigger explainerId="cve-inspector" label="the CVE inspector" /><button type="button" aria-label="Close record inspector" data-inspector-close>×</button></div></header>
+	<div class="inspector-body">
+		<div class="inspector-classification"><span data-inspector-ransomware>—</span><span>CISA KEV</span></div>
+		<h3 data-inspector-name>—</h3>
+		<p data-inspector-description>—</p>
+		<dl>
+			<div><dt>Vendor</dt><dd data-inspector-vendor>—</dd></div>
+			<div><dt>Product</dt><dd data-inspector-product>—</dd></div>
+			<div><dt>Date added</dt><dd data-inspector-added>—</dd></div>
+			<div><dt>Remediation due</dt><dd data-inspector-due>—</dd></div>
+			<div class="inspector-wide"><dt>CWE identifiers</dt><dd data-inspector-cwes>—</dd></div>
+			<div class="inspector-wide inspector-action" data-explainer-panel="required-action" data-explainer-category="methodology"><dt>Required action</dt><dd data-inspector-action>—</dd><ExplainerTrigger explainerId="required-action" label="the required action field" /></div>
+			<div class="inspector-wide"><dt>Official notes</dt><dd data-inspector-notes>—</dd></div>
+		</dl>
+		<div class="inspector-source"><span>Source</span><strong>CISA · Known Exploited Vulnerabilities Catalog</strong></div>
+		<a class="future-connector inspector-source-link" href={sourceUrl} target="_blank" rel="noreferrer">Open official CISA KEV feed ↗</a>
+	</div>
+</aside>

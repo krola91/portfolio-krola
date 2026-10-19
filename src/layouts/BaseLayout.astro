@@ -1,0 +1,68 @@
+---
+import "../styles/global.css";
+import Navbar from "../components/common/navbar.astro";
+import ScorpionCrawler from "../components/common/scorpion-crawler.astro";
+
+interface Props {
+	lang?: string;
+	title?: string;
+	description?: string;
+	showPortfolioChrome?: boolean;
+}
+
+const {
+	lang = "es",
+	title = "Krola — Portafolio digital",
+	description = "Portafolio de diseño web con inteligencia artificial y ciberseguridad.",
+	showPortfolioChrome = true,
+} = Astro.props;
+// The observatory supplies its own main landmark; Home keeps its original one.
+const ContentWrapper = showPortfolioChrome ? "main" : "div";
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content={description} />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		{showPortfolioChrome && <Navbar />}
+		{showPortfolioChrome && <ScorpionCrawler />}
+		<ContentWrapper id="main-content">
+			<slot />
+		</ContentWrapper>
+
+		<script>
+			const sections = document.querySelectorAll<HTMLElement>("#main-content > section");
+
+			const revealSection = (section: HTMLElement) => {
+				section.classList.add("is-visible");
+			};
+
+			if ("IntersectionObserver" in window) {
+				const observer = new IntersectionObserver(
+					(entries) => {
+						entries.forEach((entry) => {
+							if (entry.isIntersecting) {
+								revealSection(entry.target as HTMLElement);
+								observer.unobserve(entry.target);
+							}
+						});
+					},
+					{ threshold: 0.12 },
+				);
+
+				sections.forEach((section) => {
+					section.classList.add("scroll-reveal-ready");
+					observer.observe(section);
+				});
+			} else {
+				sections.forEach(revealSection);
+			}
+		</script>
+	</body>
+</html>

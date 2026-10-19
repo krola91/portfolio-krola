@@ -1,0 +1,16 @@
+---
+import type { ThreatActor } from "../../../types/threat-actors";
+import { legalLabel } from "../../../lib/cyber/threat-actors/actor-statistics";
+import { toActorSearchRecord } from "../../../lib/cyber/threat-actors/filter-actors";
+interface Props { actors: readonly ThreatActor[]; }
+const { actors } = Astro.props;
+const records = actors.map(toActorSearchRecord);
+const statuses = [...new Set(records.flatMap((actor) => [...actor.legalStatus]))];
+const facets = [{ name: "classification", label: "Specialization", values: [...new Set(records.map((actor) => actor.classification))] }, { name: "association", label: "Group / malware", values: [...new Set(records.flatMap((actor) => [...actor.associations]))] }, { name: "activity", label: "Activity", values: [...new Set(records.flatMap((actor) => [...actor.activities]))] }];
+---
+<form class="filter-console actor-filters" data-actor-filter-form role="search" aria-label="Filter actor records">
+	<label class="search-field"><span>Name / alias</span><input type="search" name="search" placeholder="Search name or alias…" autocomplete="off" data-actor-search-input /></label>
+	<label><span>Legal status</span><select name="legal"><option value="all">All legal states</option>{statuses.map((value) => <option value={value}>{legalLabel(value)}</option>)}</select></label>
+	{facets.map((facet) => <label><span>{facet.label}</span><select name={facet.name}><option value="all">All {facet.label.toLowerCase()}</option>{facet.values.sort().map((value) => <option value={value}>{value}</option>)}</select></label>)}
+	<button class="filter-reset" type="reset">RESET ↺</button>
+</form>

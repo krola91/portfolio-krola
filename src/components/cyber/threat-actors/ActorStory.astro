@@ -1,0 +1,20 @@
+---
+import type { ThreatActor } from "../../../types/threat-actors";
+import { legalLabel } from "../../../lib/cyber/threat-actors/actor-statistics";
+import SourceRefs from "./SourceRefs.astro";
+interface Props { actor: ThreatActor; }
+const { actor } = Astro.props;
+---
+<section class="intel-panel actor-story" id={`${actor.id}-story`} aria-labelledby={`${actor.id}-story-title`}>
+	<header class="panel-heading">
+		<div><p class="panel-kicker">THE STORY // DOCUMENTED CASE</p><h2 id={`${actor.id}-story-title`}>Behind the name.</h2></div>
+		<span>PERSON · METHODS · CASE</span>
+	</header>
+	<div class="actor-story__body">
+		{actor.story.map((paragraph) => <div class="actor-story__paragraph">
+			<p>{paragraph.value}</p>
+			<div class="actor-story__evidence"><span class="actor-assertion" data-assertion={paragraph.assertion}>{legalLabel(paragraph.assertion)}</span><SourceRefs ids={paragraph.sourceIds} /></div>
+		</div>)}
+		<p class="actor-panel-note actor-story__note">A case history from official records, not a fictional biography. Allegations are distinguished from judicial outcomes.</p>
+	</div>
+</section>

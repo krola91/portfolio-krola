@@ -1,0 +1,25 @@
+---
+interface Props {
+	explainerId: string;
+	label: string;
+}
+
+const { explainerId, label } = Astro.props;
+---
+
+<button
+	type="button"
+	class="explainer-trigger"
+	data-explainer-trigger={explainerId}
+	data-explainer-hint="MORE INFO — CLICK TO OPEN"
+	aria-controls="vulnerability-explainer-popover"
+	aria-describedby="vulnerability-explainer-trigger-hint"
+	aria-expanded="false"
+	aria-label={`Open information about ${label}`}
+>
+	<svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+		<circle cx="12" cy="12" r="8.5"></circle>
+		<path d="M12 10.75v5.5"></path>
+		<circle cx="12" cy="7.75" r="0.8" class="explainer-trigger__dot"></circle>
+	</svg>
+</button>

@@ -1,0 +1,299 @@
+<section id="hero" class="hero relative isolate min-h-[100svh] overflow-hidden">
+	<video
+		aria-hidden="true"
+		autoplay
+		class="absolute inset-0 -z-20 size-full object-cover"
+		disablepictureinpicture
+		loop
+		muted
+		playsinline
+		preload="metadata"
+		tabindex="-1"
+	>
+		<source src="/sources/background_hero.mp4" type="video/mp4" />
+	</video>
+
+	<div aria-hidden="true" class="absolute inset-0 -z-10 bg-dark/10"></div>
+
+	<div class="relative z-10 grid min-h-[100svh] md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+		<div class="flex min-h-[56svh] items-center bg-dark/20 px-6 pb-5 pt-20 sm:px-10 md:min-h-[100svh] md:px-[clamp(2rem,5vw,6rem)] md:pb-5 md:pt-16">
+			<div class="w-full max-w-[30rem]">
+				<div class="relative">
+					<h1 class="font-title text-[clamp(3rem,7vw,8.5rem)] font-black uppercase leading-[0.86] tracking-[-0.055em] text-white">
+						<span class="block">Design</span>
+						<span class="block text-electric-lime">Beyond</span>
+						<span class="block">Limits</span>
+					</h1>
+				</div>
+
+				<p class="mt-8 max-w-[26rem] lowercase text-[clamp(0.9rem,1.2vw,1.1rem)] leading-relaxed text-grey">
+					<strong class="font-bold text-lime">AI-powered design, hyper-tuned by human vision.</strong>{" "}
+					Unique web builds, high-octane art direction, and next-gen cybersecurity.
+				</p>
+
+				<div class="hero-actions mt-8 sm:mt-10">
+					<button class="terminal-button" type="button">
+						<span class="terminal-button__face"><span aria-hidden="true">&gt;_</span> LET'S LAUNCH A PROJECT</span>
+					</button>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="relative flex min-h-[56svh] items-center justify-center bg-neutral-blue/20 px-6 pb-5 pt-16 sm:px-10 md:min-h-[100svh] md:pb-5 md:pt-16">
+			<p class="pointer-events-none absolute right-3 top-1/2 z-20 -translate-y-1/2 font-title text-[10px] font-normal uppercase tracking-[0.35em] text-grey [text-orientation:mixed] [writing-mode:vertical-rl] sm:right-5 sm:text-xs">
+				CAROLINA VALLEJO AI WEB DESIGNER - CYBERSECURITY
+			</p>
+			<span class="profile-divider" aria-hidden="true"></span>
+
+			<figure class="skull-stage relative aspect-square w-full max-w-[min(78vw,48rem)]" aria-label="Calavera cibernética">
+				<img
+					alt="Calavera cibernética con gafas y detalles futuristas"
+					class="skull-image skull-color absolute inset-0 size-full object-contain"
+					draggable="false"
+					height="2048"
+					src="/sources/calavera.webp"
+					width="2048"
+				/>
+				<img
+					alt=""
+					aria-hidden="true"
+					class="skull-image skull-wireframe absolute inset-0 size-full object-contain"
+					draggable="false"
+					height="2048"
+					src="/sources/calavera_wireframe.webp"
+					width="2048"
+				/>
+				<img
+					alt=""
+					aria-hidden="true"
+					class="skull-glitch skull-glitch-a absolute inset-0 size-full object-contain"
+					draggable="false"
+					height="2048"
+					src="/sources/calavera.webp"
+					width="2048"
+				/>
+				<img
+					alt=""
+					aria-hidden="true"
+					class="skull-glitch skull-glitch-b absolute inset-0 size-full object-contain"
+					draggable="false"
+					height="2048"
+					src="/sources/calavera.webp"
+					width="2048"
+				/>
+			</figure>
+		</div>
+	</div>
+
+</section>
+
+<style>
+	.profile-divider {
+		position: absolute;
+		top: 15%;
+		right: clamp(3.25rem, 4vw, 4.5rem);
+		z-index: 10;
+		height: 70%;
+		border-left: 0.3px solid var(--color-grey);
+		box-shadow: 0 0 3px rgb(226 226 228 / 55%);
+	}
+
+	.hero-actions {
+		position: relative;
+	}
+
+	.hero-orbit {
+		position: absolute;
+		top: 50%;
+		left: calc(50vw - clamp(2rem, 5vw, 6rem));
+		z-index: 30;
+		width: clamp(7rem, 10vw, 9.5rem);
+		aspect-ratio: 1;
+		transform: translate(-50%, -50%);
+		filter: drop-shadow(0 0 13px rgb(25 64 247 / 38%));
+		pointer-events: none;
+	}
+
+	.hero-orbit-svg {
+		display: block;
+		width: 100%;
+		height: 100%;
+		overflow: visible;
+		animation: hero-orbit-spin 12s linear infinite;
+	}
+
+	.orbit-outline,
+	.orbit-globe,
+	.orbit-grid {
+		fill: none;
+		stroke-width: 0.75;
+	}
+
+	.orbit-outline {
+		stroke: var(--color-electric-lime);
+		stroke-dasharray: 2 4;
+	}
+
+	.orbit-globe {
+		stroke: rgb(25 64 247 / 90%);
+	}
+
+	.orbit-grid {
+		stroke: rgb(226 226 228 / 68%);
+		stroke-width: 0.55;
+	}
+
+	.orbit-core {
+		fill: var(--color-electric-lime);
+		filter: drop-shadow(0 0 4px var(--color-electric-lime));
+	}
+
+	.orbit-text {
+		fill: var(--color-grey);
+		font-family: var(--font-title);
+		font-size: 10px;
+		font-weight: 400;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+	}
+
+	.skull-stage {
+		animation: skull-float 5.5s ease-in-out infinite;
+		filter: drop-shadow(0 32px 22px rgb(1 2 7 / 72%)) drop-shadow(0 0 28px rgb(25 64 247 / 48%));
+		transform-origin: 50% 58%;
+		transition: filter 350ms ease;
+	}
+
+	.skull-image {
+		transition: opacity 240ms steps(2, end), filter 350ms ease;
+	}
+
+	.skull-color {
+		opacity: 1;
+	}
+
+	.skull-wireframe {
+		filter: drop-shadow(9px 12px 0 rgb(1 2 7 / 48%)) drop-shadow(0 0 20px rgb(255 255 255 / 38%));
+		opacity: 0;
+	}
+
+	.skull-stage:hover .skull-color {
+		opacity: 0;
+	}
+
+	.skull-stage:hover .skull-wireframe {
+		opacity: 1;
+	}
+
+	.skull-stage:hover {
+		filter: drop-shadow(14px 34px 18px rgb(1 2 7 / 82%)) drop-shadow(-10px 7px 0 rgb(25 64 247 / 28%));
+	}
+
+	.skull-glitch {
+		filter: brightness(0) invert(1);
+		mix-blend-mode: screen;
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	.skull-glitch-a {
+		animation: white-glitch-a 2.8s steps(1, end) infinite;
+		clip-path: polygon(0 15%, 100% 15%, 100% 31%, 0 31%);
+	}
+
+	.skull-glitch-b {
+		animation: white-glitch-b 3.2s steps(1, end) 500ms infinite;
+		clip-path: polygon(0 58%, 100% 58%, 100% 76%, 0 76%);
+	}
+
+
+
+
+
+	@keyframes skull-float {
+		0%,
+		100% {
+			transform: translate3d(0, 0, 0) rotate(-0.5deg);
+		}
+
+		50% {
+			transform: translate3d(0, -18px, 0) rotate(0.6deg);
+		}
+	}
+
+	@keyframes hero-orbit-spin {
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	@media (max-width: 767px) {
+		.hero-actions {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 1rem;
+		}
+
+		.hero-orbit {
+			position: relative;
+			top: auto;
+			left: auto;
+			width: 6rem;
+			flex: 0 0 auto;
+			transform: none;
+		}
+	}
+
+	@keyframes white-glitch-a {
+		0%,
+		75%,
+		100% {
+			opacity: 0;
+			transform: translateX(0);
+		}
+
+		77% {
+			opacity: 0.7;
+			transform: translateX(10px);
+		}
+
+		79% {
+			opacity: 0.18;
+			transform: translateX(-7px);
+		}
+	}
+
+	@keyframes white-glitch-b {
+		0%,
+		82%,
+		100% {
+			opacity: 0;
+			transform: translateX(0);
+		}
+
+		84% {
+			opacity: 0.55;
+			transform: translateX(-12px);
+		}
+
+		86% {
+			opacity: 0.22;
+			transform: translateX(6px);
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.skull-stage,
+		.skull-glitch-a,
+		.skull-glitch-b,
+		.hero-orbit-svg {
+			animation: none;
+		}
+
+		.skull-glitch {
+			display: none;
+		}
+	}
+</style>

@@ -1,0 +1,14 @@
+---
+import type { ThreatActor } from "../../../types/threat-actors";
+import { legalLabel } from "../../../lib/cyber/threat-actors/actor-statistics";
+import SourceRefs from "./SourceRefs.astro";
+import ExplainerTrigger from "../education/ExplainerTrigger.astro";
+interface Props { actor: ThreatActor; }
+const { actor } = Astro.props;
+const explainedStatus: Record<string, string> = { WANTED: "actor-wanted", CHARGED: "actor-charged", CONVICTED: "actor-convicted", SANCTIONED: "actor-sanctioned" };
+---
+<section class="intel-panel actor-legal" id={`${actor.id}-legal`} aria-labelledby={`${actor.id}-legal-title`}>
+	<header class="panel-heading"><div><p class="panel-kicker">LEGAL RECORD // QUALIFIED ACTIONS</p><h2 id={`${actor.id}-legal-title`}>Charges ≠ conviction</h2></div></header>
+	<div class="actor-legal__actions">{actor.legalActions.map((action) => <article data-explainer-panel={explainedStatus[action.assertion]}><header><span class="actor-assertion" data-assertion={action.assertion}>{legalLabel(action.assertion)}</span><time datetime={action.date ?? undefined}>{action.date ?? "Published notice · reviewed " + actor.lastVerifiedAt}</time>{explainedStatus[action.assertion] && <ExplainerTrigger explainerId={explainedStatus[action.assertion]} label={legalLabel(action.assertion)} />}</header><h3>{action.label}</h3><p class="actor-jurisdiction">{action.jurisdiction}</p><p>{action.value}</p><dl>{[["Charges", action.charges], ["Outcome", action.outcome], ["Sentence", action.sentence], ["Reward", action.reward]].filter(([, value]) => value).map(([label, value]) => <div><dt>{label}</dt><dd>{value}</dd></div>)}</dl><SourceRefs ids={action.sourceIds} /></article>)}</div>
+	<p class="actor-panel-note">LAST VERIFIED // {actor.lastVerifiedAt} UTC. An announced sentence is a judicial outcome, not a statement of present custody. An administrative sanction is not a conviction.</p>
+</section>

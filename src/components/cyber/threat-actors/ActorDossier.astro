@@ -1,0 +1,42 @@
+---
+import type { ThreatActor } from "../../../types/threat-actors";
+import { ACTOR_LEGAL_NOTICE } from "../../../data/cyber/threat-actors/actors";
+import { actorHash, DOSSIER_SECTIONS } from "../../../lib/cyber/threat-actors/actor-navigation";
+import { legalLabel } from "../../../lib/cyber/threat-actors/actor-statistics";
+import ExplainerTrigger from "../education/ExplainerTrigger.astro";
+import ActorPortrait from "./ActorPortrait.astro";
+import ActorStory from "./ActorStory.astro";
+import ActorLegalRecord from "./ActorLegalRecord.astro";
+import ActorSourceLog from "./ActorSourceLog.astro";
+import SourceRefs from "./SourceRefs.astro";
+interface Props { actor: ThreatActor; }
+const { actor } = Astro.props;
+const linked = actor.associations.find((edge) => edge.kind === "GROUP" || edge.kind === "MALWARE" || edge.kind === "CAMPAIGN");
+const glossary = actor.id === "park-jin-hyok" ? ["actor-state-linked", "actor-private-attribution"] : actor.activities.includes("Ransomware") ? ["actor-raas"] : actor.activities.includes("Botnet") ? ["actor-botnet"] : [];
+const glossaryLabels: Record<string, string> = { "actor-state-linked": "State-sponsored activity alleged", "actor-private-attribution": "Private attribution", "actor-raas": "Ransomware-as-a-service", "actor-botnet": "Botnet" };
+---
+<article class="actor-dossier" data-actor-dossier={actor.id} aria-labelledby={`dossier-${actor.id}`} hidden>
+	<div class="actor-dossier__topbar"><a class="actor-back" href="#actors" data-actor-back>← BACK TO ACTOR INDEX</a><span>ACTOR DOSSIER // {String(actor.index).padStart(2, "0")} · PUBLIC RECORD</span></div>
+	<nav class="actor-dossier__nav" aria-label={`Dossier views for ${actor.displayName}`}>
+		{DOSSIER_SECTIONS.map((section) => <a href={actorHash(actor.id, section)} data-dossier-section={section}>{section === "legal" ? "LEGAL RECORD" : section === "sources" ? "SOURCE LOG" : section.toUpperCase()}</a>)}
+	</nav>
+	<div class="actor-dossier__layout">
+		<aside class="actor-identity intel-panel" aria-label="Official identity record">
+			<ActorPortrait actor={actor} context="dossier" />
+			<p class="panel-kicker">OFFICIAL IDENTITY</p><h1 id={`dossier-${actor.id}`} tabindex="-1">{actor.displayName}</h1><SourceRefs ids={actor.identitySourceIds} />
+			<p class="actor-legal-badge">{actor.legalStatus.map(legalLabel).join(" · ")}</p>
+			<dl><div><dt>Classification</dt><dd>{actor.classification.assertion === "ALLEGED" && "Alleged "}{actor.classification.value}<SourceRefs ids={actor.classification.sourceIds} /></dd></div><div><dt>Known aliases</dt><dd>{actor.aliases.length ? actor.aliases.map((alias) => <span class="actor-identity__alias">{alias.value}<SourceRefs ids={alias.sourceIds} /></span>) : "No alias listed in reviewed sources"}</dd></div>{actor.nationality && <div><dt>{actor.nationality.label}</dt><dd>{actor.nationality.value}<SourceRefs ids={actor.nationality.sourceIds} /></dd></div>}</dl>
+			<div class="actor-last-verified" data-explainer-panel="actor-last-verified"><span>LAST VERIFIED // {actor.lastVerifiedAt} UTC</span><ExplainerTrigger explainerId="actor-last-verified" label="Last verified" /></div>
+			{linked && <div class="actor-identity__linked"><span>PRINCIPAL ASSOCIATION · {legalLabel(linked.assertion)}</span><strong>{linked.label}</strong><SourceRefs ids={linked.sourceIds} /></div>}
+			<p class="actor-panel-note">Public records only. No live tracking.</p>
+		</aside>
+		<div class="actor-dossier__panels">
+			<section class="intel-panel actor-summary" id={`${actor.id}-overview`} aria-labelledby={`${actor.id}-summary-title`}><header class="panel-heading"><div><p class="panel-kicker">OVERVIEW // PLAIN-LANGUAGE BRIEF</p><h2 id={`${actor.id}-summary-title`}>Read the evidence.</h2></div></header><p>{actor.summary.value}</p><span class="actor-assertion" data-assertion={actor.summary.assertion}>{legalLabel(actor.summary.assertion)}</span><SourceRefs ids={actor.summary.sourceIds} /><div class="actor-capabilities"><h3>Technique / capability profile</h3><ul>{actor.capabilities.map((item) => <li><strong>{item.label}</strong><span>{item.assertion === "ALLEGED" ? "ALLEGED IN CHARGES" : "DOCUMENTED JUDICIAL OUTCOME"}</span><p>{item.value}</p><SourceRefs ids={item.sourceIds} /></li>)}</ul></div>
+				{glossary.length > 0 && <div class="actor-context-terms">{glossary.map((id) => <div data-explainer-panel={id}><span>{glossaryLabels[id]}</span><ExplainerTrigger explainerId={id} label={glossaryLabels[id]} /></div>)}</div>}
+			</section>
+			<section class="intel-panel actor-footprint" data-explainer-panel="actor-footprint" aria-labelledby={`${actor.id}-footprint-title`}><header class="panel-heading"><div><p class="panel-kicker">VICTIM REACH // NOT SUBJECT LOCATION</p><h2 id={`${actor.id}-footprint-title`}>Documented operational footprint</h2></div><ExplainerTrigger explainerId="actor-footprint" label="Documented operational footprint" /></header><div class="actor-footprint__graphic" aria-hidden="true"><svg viewBox="0 0 400 90"><g fill="none" stroke="currentColor" stroke-width="0.5"><path d="M0 45h400M200 0v90M20 20h360M20 70h360"/><ellipse cx="200" cy="45" rx="150" ry="40"/><ellipse cx="200" cy="45" rx="95" ry="40"/><ellipse cx="200" cy="45" rx="40" ry="40"/><path d="M50 45L155 20L250 70L350 45" stroke-dasharray="3 4"/></g><circle cx="200" cy="45" r="4" fill="currentColor"/></svg></div><p class="actor-panel-note">Schematic only · no geographic coordinates or location inference.</p><dl>{actor.footprint.map((item) => <div><dt>{item.label}</dt><dd>{item.value}<span class="actor-assertion">{legalLabel(item.assertion)}</span><SourceRefs ids={item.sourceIds} /></dd></div>)}</dl></section>
+			<ActorStory actor={actor} /><ActorLegalRecord actor={actor} /><ActorSourceLog actors={[actor]} id={`${actor.id}-sources`} />
+		</div>
+	</div>
+	<p class="actor-legal-notice"><strong>LEGAL STATUS NOTICE</strong>{ACTOR_LEGAL_NOTICE}</p>
+</article>

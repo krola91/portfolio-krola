@@ -1,0 +1,26 @@
+---
+import { ACTORS } from "../../data/cyber/threat-actors/actors";
+---
+<dialog class="command-palette" data-command-dialog aria-labelledby="command-title">
+	<form method="dialog" class="command-palette__surface">
+		<header><span aria-hidden="true">⌘</span><div><p>System command</p><h2 id="command-title">Navigate the observatory</h2></div><button value="cancel" aria-label="Close command palette">Esc</button></header>
+		<label><span class="sr-only">Search commands</span><input type="search" placeholder="Type a command…" autocomplete="off" data-command-search /></label>
+		<div class="command-list" role="listbox" aria-label="Available commands">
+			<button type="button" role="option" aria-selected="false" data-command="actors"><span><i>02</i>Open Threat Actor Tracking</span><kbd>TA</kbd></button>
+			<button type="button" role="option" aria-selected="false" data-command="actor-index"><span><i>IDX</i>Open Actor Index</span><kbd>8</kbd></button>
+			<button type="button" role="option" aria-selected="false" data-command="actor-search"><span><i>FIND</i>Search actors</span><kbd>/</kbd></button>
+			{ACTORS.map((actor) => <button type="button" role="option" aria-selected="false" data-command={`actor:${actor.id}`} data-command-aliases={actor.aliases.map((alias) => alias.value).join(" ")}><span><i>{String(actor.index).padStart(2, "0")}</i>Open {actor.displayName} {actor.aliases[0] && ` / ${actor.aliases[0].value}`}</span><kbd>↗</kbd></button>)}
+			<button type="button" role="option" aria-selected="false" data-command="module-methodology"><span><i>NOTE</i>Open Methodology · current module</span><kbd>Q</kbd></button>
+			<button type="button" role="option" aria-selected="false" data-command="source-log"><span><i>SRC</i>Open Actor Source Log</span><kbd>S</kbd></button>
+			<button type="button" role="option" aria-selected="false" data-command="vulnerabilities"><span><i>01</i>Open Vulnerability Intelligence</span><kbd>KEV</kbd></button>
+			<button type="button" role="option" data-command="overview"><span><i>01</i>Jump to intelligence overview</span><kbd>O</kbd></button>
+			<button type="button" role="option" data-command="records"><span><i>02</i>Open vulnerability registry</span><kbd>V</kbd></button>
+			<button type="button" role="option" data-command="search"><span><i>03</i>Focus registry search</span><kbd>/</kbd></button>
+			<button type="button" role="option" data-command="range-30D"><span><i>04</i>Set observation range: 30D</span><kbd>3</kbd></button>
+			<button type="button" role="option" data-command="range-ALL"><span><i>05</i>Set observation range: all</span><kbd>A</kbd></button>
+			<button type="button" role="option" data-command="motion"><span><i>06</i>Toggle ambient motion</span><kbd>M</kbd></button>
+			<button type="button" role="option" data-command="methodology"><span><i>07</i>Read methodology note</span><kbd>Q</kbd></button>
+		</div>
+		<footer><span>↑↓ Select</span><span>Enter Execute</span><span>Esc Close</span></footer>
+	</form>
+</dialog>

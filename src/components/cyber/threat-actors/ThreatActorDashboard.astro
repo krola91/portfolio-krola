@@ -1,0 +1,26 @@
+---
+import { ACTORS, ACTOR_LEGAL_NOTICE, ACTOR_METHODOLOGY } from "../../../data/cyber/threat-actors/actors";
+import "../../../styles/actor-ledger.css";
+import { actorStatistics } from "../../../lib/cyber/threat-actors/actor-statistics";
+import { toActorSearchRecord } from "../../../lib/cyber/threat-actors/filter-actors";
+import ExplainerTrigger from "../education/ExplainerTrigger.astro";
+import ActorLedgerPanel from "./ActorLedgerPanel.astro";
+import ActorFilters from "./ActorFilters.astro";
+import ActorDossier from "./ActorDossier.astro";
+import ActorSourceLog from "./ActorSourceLog.astro";
+const stats = actorStatistics(ACTORS);
+---
+<div class="threat-actor-lab" data-actor-module data-actor-verified={stats.lastVerified}>
+	<div class="actor-ledger-index" data-actor-index>
+		<header class="ledger-heading"><div><p>MODULE / 02 · CURATED OFFICIAL RECORDS</p><h1 id="actor-index-title" tabindex="-1">Threat actor <em>tracking</em></h1></div><div data-explainer-panel="actor-last-verified"><span>{stats.total} PROFILES / {stats.sourceCount} SOURCES</span><p>REVIEWED {stats.lastVerified} <ExplainerTrigger explainerId="actor-last-verified" label="Last verified" /></p></div></header>
+		<div class="actor-ledger" data-actor-ledger>
+			<div class="ledger-tabs" role="tablist" aria-label="Choose a threat actor">{ACTORS.map((actor) => <button type="button" role="tab" id={`actor-tab-${actor.id}`} aria-controls={`actor-panel-${actor.id}`} aria-selected={actor.index === 1 ? "true" : "false"} tabindex={actor.index === 1 ? 0 : -1} data-actor-tab={actor.id} data-actor-search={JSON.stringify(toActorSearchRecord(actor))} aria-label={actor.displayName}><span>{String(actor.index).padStart(2, "0")}</span><strong>{actor.id === "park-jin-hyok" ? "PARK JIN HYOK" : actor.displayName.split(" ").at(-1)}</strong></button>)}</div>
+			<div class="ledger-sheets">{ACTORS.map((actor) => <ActorLedgerPanel actor={actor} />)}<div class="actor-empty ledger-empty" data-actor-empty hidden><h2>No matching records.</h2><p>Broaden a filter or reset the curated index.</p><button type="button" class="filter-reset" data-actor-empty-reset>RESET FILTERS ↺</button></div></div>
+			<footer class="ledger-footer"><div class="ledger-toolbar"><details class="ledger-filter-popup" data-actor-filter-popup><summary>⌕ SEARCH / FILTER REGISTRY</summary><ActorFilters actors={ACTORS} /></details><p data-actor-result-summary role="status" aria-live="polite" aria-atomic="true">8 of 8 profiles available</p><a href="#actors-methodology">METHODOLOGY ↗</a><a href="#actors-sources">SOURCE LOG ↗</a></div></footer>
+		</div>
+	</div>
+	<div class="ledger-reference" data-actor-reference="actors-methodology" hidden><a class="actor-back" href="#actors">← BACK TO ACTOR INDEX</a><section class="intel-panel actor-methodology" id="actors-methodology" aria-labelledby="actors-methodology-title"><p class="panel-kicker">CURATION // NOT A RANKING</p><h2 id="actors-methodology-title" tabindex="-1">Methodology & boundaries</h2><p>{ACTOR_METHODOLOGY.intro}</p><div><p>{ACTOR_METHODOLOGY.selection}</p><p>{ACTOR_METHODOLOGY.freshness}</p><p>{ACTOR_METHODOLOGY.rights}</p><p>{ACTOR_METHODOLOGY.limits}</p></div><p class="actor-legal-notice">{ACTOR_LEGAL_NOTICE}</p><p class="actor-source-pipeline">OFFICIAL RECORDS → CLAIM REVIEW → LEGAL QUALIFICATION → CURATED PROFILE</p></section></div>
+	<div class="ledger-reference" data-actor-reference="actors-sources" hidden><a class="actor-back" href="#actors">← BACK TO ACTOR INDEX</a><ActorSourceLog actors={ACTORS} id="actors-sources" /></div>
+	{ACTORS.map((actor) => <ActorDossier actor={actor} />)}
+	<p class="sr-only" data-actor-announcement aria-live="polite" aria-atomic="true"></p>
+</div>
