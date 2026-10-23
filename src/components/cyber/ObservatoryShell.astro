@@ -5,6 +5,7 @@ import { getDatasetIntegrity } from "../../lib/cyber/dataset-health";
 import type { KevDataset } from "../../types/cyber";
 import "../../styles/cyber-observatory.css";
 import "../../styles/threat-actors.css";
+import "../../styles/geopolitical-risk.css";
 import CommandPalette from "./CommandPalette.astro";
 import CveInspector from "./CveInspector.astro";
 import ExplainerPopover from "./education/ExplainerPopover.astro";
@@ -12,6 +13,7 @@ import ObservatoryHeader from "./ObservatoryHeader.astro";
 import ObservatoryNavigation from "./ObservatoryNavigation.astro";
 import VulnerabilityDashboard from "./vulnerability/VulnerabilityDashboard.astro";
 import ThreatActorDashboard from "./threat-actors/ThreatActorDashboard.astro";
+import GeopoliticalRiskDashboard from "./geopolitical-risk/GeopoliticalRiskDashboard.astro";
 
 const dataset = datasetJson as KevDataset;
 const health = getDatasetIntegrity(dataset.metadata);
@@ -25,6 +27,7 @@ const health = getDatasetIntegrity(dataset.metadata);
 	<main class="observatory-main">
 		<div data-module-view="actors"><ThreatActorDashboard /></div>
 		<div data-module-view="vulnerabilities" hidden><VulnerabilityDashboard dataset={dataset} health={health} /></div>
+		<div data-module-view="geopolitics" hidden><GeopoliticalRiskDashboard /></div>
 	</main>
 	<CveInspector sourceUrl={dataset.metadata.sourceUrl} />
 	<ExplainerPopover />

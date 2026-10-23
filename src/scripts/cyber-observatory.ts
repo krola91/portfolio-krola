@@ -1,6 +1,8 @@
 import datasetJson from "../data/cyber/generated/cisa-kev.json";
 import { EDUCATION_SOURCE_BY_ID, getObservatorySourceLabel, OBSERVATORY_EXPLAINER_BY_ID } from "../data/cyber/observatory-explainers";
 import { initThreatActorTracking } from "./threat-actor-tracking";
+import { initGeopoliticalRisk } from "./geopolitical-risk";
+import { initObservatoryNavigation } from "../lib/cyber/observatory-navigation";
 import { groupByYear, rankByLabel, rankCwes } from "../lib/cyber/aggregate-vulnerabilities";
 import { filterVulnerabilities } from "../lib/cyber/filter-vulnerabilities";
 import type { KevDataset, ObservatoryVulnerability, TimelineRange, VulnerabilityFilters } from "../types/cyber";
@@ -9,7 +11,7 @@ const root = document.querySelector<HTMLElement>("[data-observatory]");
 const dataset = datasetJson as KevDataset;
 
 if (root && dataset) {
-	const actorNavigation = initThreatActorTracking(root);
+	const actorNavigation = initObservatoryNavigation(root, initThreatActorTracking(root), initGeopoliticalRisk(root));
 	const records = dataset.vulnerabilities;
 	const byId = new Map(records.map((record) => [record.id, record]));
 	const datasetNow = new Date(dataset.metadata.dateReleased);
@@ -401,7 +403,7 @@ if (root && dataset) {
 
 	const inspector = query<HTMLElement>("[data-inspector]"); const backdrop = query<HTMLElement>("[data-inspector-backdrop]");
 	const setInspectorText = (selector: string, value: string) => { const target = query<HTMLElement>(selector); if (target) target.textContent = value; };
-	const closeInspector = () => { if (!inspector) return; inspector.classList.remove("is-open"); inspector.setAttribute("aria-hidden", "true"); if (backdrop) backdrop.hidden = true; document.body.style.removeProperty("overflow"); inspectorReturnFocus?.focus(); };
+	const closeInspector = () => { if (!inspector || inspector.getAttribute("aria-hidden") === "true") return; inspector.classList.remove("is-open"); inspector.setAttribute("aria-hidden", "true"); if (backdrop) backdrop.hidden = true; document.body.style.removeProperty("overflow"); inspectorReturnFocus?.focus(); };
 	const openInspector = (id: string, trigger?: HTMLElement) => {
 		const record = byId.get(id); if (!record || !inspector) return; inspectorReturnFocus = trigger ?? null;
 		setInspectorText("[data-inspector-cve]", record.cveId); setInspectorText("[data-inspector-ransomware]", record.knownRansomwareUse === "known" ? "Ransomware: known use" : "Ransomware: unknown / not confirmed"); setInspectorText("[data-inspector-name]", record.name); setInspectorText("[data-inspector-description]", record.description); setInspectorText("[data-inspector-vendor]", record.vendor); setInspectorText("[data-inspector-product]", record.product); setInspectorText("[data-inspector-added]", formatDate(record.dateAdded)); setInspectorText("[data-inspector-due]", formatDate(record.remediationDueDate)); setInspectorText("[data-inspector-cwes]", record.cwes.join(" · ") || "Not listed by CISA"); setInspectorText("[data-inspector-action]", record.requiredAction); setInspectorText("[data-inspector-notes]", record.notes || "No notes listed by CISA");
@@ -428,6 +430,7 @@ if (root && dataset) {
 		if (event.key === "Enter" && event.target === commandSearch) { event.preventDefault(); if (options[0]) runCommand(options[0].dataset.command ?? ""); }
 	});
 	document.addEventListener("keydown", (event) => {
+		if (query<HTMLDialogElement>("[data-geo-dialog]")?.open) return;
 		if (activeExplainerId && explainerPopover) {
 			if (event.key === "Tab") {
 				const focusable = queryAll<HTMLElement>('button:not([disabled]), a[href]', explainerPopover).filter((item) => !item.hidden);
@@ -440,8 +443,9 @@ if (root && dataset) {
 		}
 		if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") { event.preventDefault(); dialog?.open ? closeCommands() : openCommands(); }
 		if (event.key === "Escape") closeInspector();
-		if (event.key === "/" && !dialog?.open && !(event.target instanceof HTMLInputElement || event.target instanceof HTMLSelectElement || event.target instanceof HTMLTextAreaElement)) { event.preventDefault(); actorNavigation.focusSearch(); }
+		if (event.key === "/" && !dialog?.open && !(event.target instanceof HTMLInputElement || event.target instanceof HTMLSelectElement || event.target instanceof HTMLTextAreaElement || event.target instanceof HTMLElement && event.target.isContentEditable)) { event.preventDefault(); if (!actorNavigation.focusSearch()) openCommands(); }
 	});
+	root.addEventListener("observatory-module-change", () => { closeInspector(); if (activeExplainerId) closeExplainer(); hideExplainerHint(true); });
 
 	if (form && tableBody) render();
 }

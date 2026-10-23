@@ -14,7 +14,10 @@
     "data:update:cisa": "node --experimental-strip-types src/scripts/update-cisa-kev.ts",
     "data:compact:cisa": "node --experimental-strip-types src/scripts/compact-cisa-kev.ts",
     "data:check:cisa": "node --experimental-strip-types src/scripts/check-cisa-kev.ts",
-    "test": "node --experimental-strip-types --test tests/cyber/domain.test.ts tests/cyber/explainers.test.ts tests/cyber/threat-actors.test.ts"
+    "data:update:geopolitics": "node --experimental-strip-types src/scripts/update-geopolitics.ts",
+    "data:check:geopolitics": "node --experimental-strip-types src/scripts/check-geopolitics.ts",
+    "data:prepare:geopolitics": "node --experimental-strip-types src/scripts/prepare-geopolitical-geometry.ts",
+    "test": "node --experimental-strip-types --test tests/cyber/domain.test.ts tests/cyber/explainers.test.ts tests/cyber/threat-actors.test.ts tests/cyber/geopolitical-risk.test.ts"
   },
   "dependencies": {
     "@fontsource-variable/josefin-sans": "^5.3.0",

@@ -1,0 +1,24 @@
+---
+import type { GeoCountryProfile, GeoCountrySummary } from "../../../types/geopolitical-risk";
+import { GEO_SOURCE_BY_ID } from "../../../data/cyber/geopolitical-risk/sources";
+interface Props { profile: GeoCountryProfile; country: GeoCountrySummary; year: number; }
+const { profile, country, year } = Astro.props;
+const maximum = Math.max(1, ...country.monthly.map((item) => item.count ?? 0));
+const monthLabel = (month: string) => new Intl.DateTimeFormat("en", { month: "short", timeZone: "UTC" }).format(new Date(`${month}-01T00:00:00Z`));
+---
+<section class="geo-attack-profile" aria-label="Attacks and frequency">
+  <h3 class="geo-nojs-title">Attacks & frequency</h3>
+  <p class="geo-content-kicker">01 / RECORDED ATTACK PATTERNS</p>
+  <ul class="geo-attack-types">{profile.attackTypes.map((type) => <li><h4>{type.label}</h4><p>{type.explanation.text} {type.explanation.references.map((reference) => <a href={GEO_SOURCE_BY_ID.get(reference.sourceId)?.url} target="_blank" rel="noopener noreferrer" aria-label={`Source for ${type.label}: ${GEO_SOURCE_BY_ID.get(reference.sourceId)?.publisher}`}>[source ↗]</a>)}</p></li>)}</ul>
+  <section class="geo-frequency" aria-label="Observed frequency">
+    <header><div><p class="geo-content-kicker">02 / OBSERVED FREQUENCY</p><h4>One year. Documented.</h4></div><strong>{country.monthlyAverage !== null ? country.monthlyAverage.toFixed(2) : "N/A"}<small>reports / month</small></strong></header>
+    {country.frequencyStatus === "monthly" ? <>
+      <ol class="geo-monthly-chart" aria-label={`Monthly reported incidents in ${year}`}>
+        {country.monthly.map((month) => <li tabindex="0" aria-label={`${monthLabel(month.month)} ${year}: ${month.count === null ? "coverage unavailable" : `${month.count} reported incidents`}`}><div><i style={`--bar-height:${month.count === null ? 0 : month.count / maximum * 100}%`}></i><span class="geo-month-tooltip">{month.count ?? "N/A"}</span></div><span>{monthLabel(month.month).slice(0, 1)}</span></li>)}
+      </ol>
+      <p>{country.monthlyNumerator} dated records / {country.coveredMonthCount} covered months. Average describes reports in EuRepoC, not a constant attack interval.</p>
+    </> : <p>Monthly breakdown unavailable for this source.</p>}
+    {country.undatedForMonthlyCount > 0 && <p>{country.undatedForMonthlyCount} annual records have no usable month and are excluded from the monthly breakdown.</p>}
+    {profile.frequencyContext && <p class="geo-context-note">{profile.frequencyContext.text} {profile.frequencyContext.references.map((reference) => <a href={GEO_SOURCE_BY_ID.get(reference.sourceId)?.url} target="_blank" rel="noopener noreferrer">Context ↗</a>)}</p>}
+  </section>
+</section>

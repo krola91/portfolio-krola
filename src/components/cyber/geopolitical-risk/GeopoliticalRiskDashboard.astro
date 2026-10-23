@@ -1,0 +1,24 @@
+---
+import summaryJson from "../../../data/cyber/geopolitical-risk/generated/summary.json";
+import metadata from "../../../data/cyber/geopolitical-risk/generated/metadata.json";
+import type { GeoSummary } from "../../../types/geopolitical-risk";
+import GeoCountryRanking from "./GeoCountryRanking.astro";
+import GeoGlobe from "./GeoGlobe.astro";
+import GeoCountryPanel from "./GeoCountryPanel.astro";
+import ExplainerTrigger from "../education/ExplainerTrigger.astro";
+const summary = summaryJson as GeoSummary;
+---
+<section id="geopolitics" class="geo-dashboard" data-geo-dashboard data-geo-year={summary.coverage.year} data-geo-summary={JSON.stringify(summary.countries.map(({ countryCode, rank, reportedIncidents }) => ({ countryCode, rank, reportedIncidents })))} aria-labelledby="geopolitics-title">
+  <header class="geo-module-header"><div><p class="geo-eyebrow">MODULE / 03 · RESEARCH DATASET</p><h1 id="geopolitics-title" tabindex="-1">GEOPOLITICAL <em>RISK</em></h1><p>EuRepoC {metadata.version} <span> / </span> {summary.coverage.year} <span> / </span> distinct reported incidents</p></div><div class="geo-edition"><span>HISTORICAL DATASET</span><strong>THROUGH {summary.coverage.year}</strong></div></header>
+  <div class="geo-command-surface"><GeoCountryRanking countries={summary.countries} year={summary.coverage.year} /><GeoGlobe countries={summary.countries} /></div>
+  <p class="geo-route-notice" data-geo-route-notice role="status" hidden></p>
+  <div class="geo-bottom-bar"><span>READ THE EVIDENCE. EXPLORE THE DEFENSE.</span><a href="#geo-about-data" data-geo-about-link>ABOUT THE DATA <span aria-hidden="true">↗</span></a></div>
+  <details class="geo-about" id="geo-about-data" data-geo-about><summary>ABOUT THE DATA <span aria-hidden="true">+</span></summary><div>
+    <section data-explainer-panel="geo-documented"><h2>What is counted? <ExplainerTrigger explainerId="geo-documented" label="Documented incident" /></h2><p>Distinct incidents affecting a country in {summary.coverage.year}, from the complete EuRepoC research edition. Multiple victims in one country count once per incident. Multi-country cases count once for each affected country. Ties use ISO code ascending; only the first eight are shown.</p></section>
+    <section data-explainer-panel="geo-frequency"><h2>Coverage & frequency <ExplainerTrigger explainerId="geo-frequency" label="Coverage and frequency" /></h2><p>Reported political and critical-infrastructure incidents are a selective historical record. Monthly values use recorded start dates and covered months. Unknown dates remain unassigned. No victim's nationality, server location or KEV record determines this ranking.</p><p>The local incident corpus keeps only the latest 50 records per country. Ranking and frequency retain aggregates calculated before this cap. The CSV has {metadata.validation.incidentCount.toLocaleString("en")} rows; the publisher's page states 3,416.</p></section>
+    <section data-explainer-panel="geo-defense"><h2>How to read defense <ExplainerTrigger explainerId="geo-defense" label="Defensive evidence" /></h2><p>Each measure identifies its source, remit and whether it describes a programme, official guidance or a documented response. A capability does not prove every organization uses it.</p><p><a href={metadata.sourceUrl} target="_blank" rel="noopener noreferrer">Dataset / DOI ↗</a> · <a href="https://eurepoc.eu/methodology/" target="_blank" rel="noopener noreferrer">Methodology ↗</a> · <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC 4.0 ↗</a></p><p>{metadata.attribution}</p><p>Statistics: {summary.coverage.start}–{summary.coverage.end}. Source reviewed {metadata.sourceCheckedAt}. Natural Earth land geometry; no incident coordinates or disputed borders are inferred.</p></section>
+  </div></details>
+  <p class="sr-only" role="status" aria-live="polite" data-geo-announcement></p>
+  <GeoCountryPanel countries={summary.countries} year={summary.coverage.year} />
+</section>
+<noscript><style>@layer base { html:has([data-geo-dashboard]) { scroll-behavior: auto !important; } .observatory [data-module-view="geopolitics"][hidden] { display: block !important; } .observatory .boot-sequence { display: none !important; } .geo-country-drawer { display: none; } }</style></noscript>

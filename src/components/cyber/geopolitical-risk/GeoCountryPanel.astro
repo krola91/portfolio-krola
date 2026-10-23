@@ -1,0 +1,34 @@
+---
+import GeoAttackProfile from "./GeoAttackProfile.astro";
+import GeoDefenseProfile from "./GeoDefenseProfile.astro";
+import { GEO_COUNTRY_PROFILES, GEO_POSITIONS } from "../../../data/cyber/geopolitical-risk/country-profiles";
+import { GEO_SOURCE_BY_ID } from "../../../data/cyber/geopolitical-risk/sources";
+import type { GeoCountrySummary, GeoReference } from "../../../types/geopolitical-risk";
+interface Props { countries: GeoCountrySummary[]; year: number; }
+const { countries, year } = Astro.props;
+---
+<dialog class="geo-country-drawer" data-geo-dialog aria-labelledby="geo-country-title">
+  <header class="geo-drawer-header"><p class="geo-eyebrow">COUNTRY BRIEF / <span data-geo-rank></span></p><button type="button" data-geo-close aria-label="Close country brief">×</button><h2 id="geo-country-title" tabindex="-1" data-geo-country-title></h2><p data-geo-country-total></p></header>
+  <div class="geo-drawer-content" data-geo-drawer-content></div>
+</dialog>
+<div class="geo-profile-library" data-geo-profile-library>
+  {countries.map((country) => {
+    const profile = GEO_COUNTRY_PROFILES.find((item) => item.countryCode === country.countryCode)!;
+    const name = GEO_POSITIONS.find((item) => item.code === country.countryCode)?.name ?? country.countryCode;
+    const refs: GeoReference[] = [...profile.attackTypes.flatMap((item) => item.explanation.references), ...(profile.leadAgency?.references ?? []), ...profile.defenses.flatMap((item) => item.references), ...profile.response.flatMap((item) => item.references), ...(profile.frequencyContext?.references ?? [])];
+    const sources = [...new Set(refs.map((ref) => ref.sourceId))].map((id) => GEO_SOURCE_BY_ID.get(id)!);
+    return <details id={`geo-profile-${country.countryCode}`} data-geo-profile={country.countryCode}><summary>{name} — country brief</summary><div data-geo-country-content={country.countryCode}>
+      <div class="geo-country-tabs" role="tablist" aria-label={`${name} brief views`}>
+        <button type="button" role="tab" id={`geo-${country.countryCode}-attacks-tab`} aria-controls={`geo-${country.countryCode}-attacks`} aria-selected="true" data-geo-tab="attacks">ATTACKS & FREQUENCY</button>
+        <button type="button" role="tab" id={`geo-${country.countryCode}-defense-tab`} aria-controls={`geo-${country.countryCode}-defense`} aria-selected="false" tabindex="-1" data-geo-tab="defense">CYBER DEFENSE</button>
+      </div>
+      <div id={`geo-${country.countryCode}-attacks`} role="tabpanel" aria-labelledby={`geo-${country.countryCode}-attacks-tab`} data-geo-tabpanel="attacks"><GeoAttackProfile profile={profile} country={country} year={year} /></div>
+      <div id={`geo-${country.countryCode}-defense`} role="tabpanel" aria-labelledby={`geo-${country.countryCode}-defense-tab`} data-geo-tabpanel="defense"><GeoDefenseProfile profile={profile} /></div>
+      <details class="geo-sources"><summary>SOURCES & NOTES <span aria-hidden="true">+</span></summary><div>
+        <p>Ranking and monthly frequency: EuRepoC 1.3.2, {year}. {country.reportedIncidents} distinct reported incidents; {country.retainedIncidents} of the latest incident records retained locally. Monthly counts are saved aggregates of the complete source, not estimates from that sample.</p>
+        <p>Editorial defense review: {profile.reviewedAt}. Attack categories overlap; geography identifies victims, not attack origin.</p>
+        <ul>{sources.map((source) => <li><a href={source.url} target="_blank" rel="noopener noreferrer">{source.title} ↗</a><small>{source.publisher} · published {source.publishedAt ?? "date not stated"} · reviewed {source.accessedAt}</small><span>{[...new Set(refs.filter((ref) => ref.sourceId === source.id).map((ref) => ref.locator).filter(Boolean))].join("; ")}</span></li>)}</ul>
+      </div></details>
+    </div></details>;
+  })}
+</div>

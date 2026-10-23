@@ -1,0 +1,16 @@
+---
+import type { GeoCountryProfile } from "../../../types/geopolitical-risk";
+import { GEO_SOURCE_BY_ID } from "../../../data/cyber/geopolitical-risk/sources";
+interface Props { profile: GeoCountryProfile; }
+const { profile } = Astro.props;
+---
+<section class="geo-defense-profile" aria-label="Cyber defense">
+  <h3 class="geo-nojs-title">Cyber defense</h3>
+  <p class="geo-content-kicker">01 / WHO COORDINATES</p>
+  {profile.leadAgency ? <div class="geo-agency"><h4><a href={profile.leadAgency.officialUrl} target="_blank" rel="noopener noreferrer">{profile.leadAgency.name} ↗</a></h4><p>{profile.leadAgency.text}</p>{profile.leadAgency.references.map((reference) => <a class="geo-citation" href={GEO_SOURCE_BY_ID.get(reference.sourceId)?.url} target="_blank" rel="noopener noreferrer">{GEO_SOURCE_BY_ID.get(reference.sourceId)?.publisher} ↗</a>)}</div> : <p>Not publicly documented in the reviewed sources.</p>}
+  <p class="geo-content-kicker">02 / DEFENSIVE CAPABILITIES</p>
+  <ul class="geo-defense-measures">{profile.defenses.map((measure) => <li><span class="geo-measure-kind">{measure.kind.replaceAll("-", " ")}</span><p>{measure.text}</p><small>Scope: {measure.scope}</small>{measure.references.map((reference) => <a class="geo-citation" href={GEO_SOURCE_BY_ID.get(reference.sourceId)?.url} target="_blank" rel="noopener noreferrer">{GEO_SOURCE_BY_ID.get(reference.sourceId)?.publisher} ↗</a>)}</li>)}</ul>
+  <p class="geo-content-kicker">03 / PREVENTION & RESPONSE</p>
+  <ul class="geo-defense-measures">{profile.response.map((measure) => <li><span class="geo-measure-kind">{measure.kind.replaceAll("-", " ")}</span><p>{measure.text}</p><small>Scope: {measure.scope}</small>{measure.references.map((reference) => <a class="geo-citation" href={GEO_SOURCE_BY_ID.get(reference.sourceId)?.url} target="_blank" rel="noopener noreferrer">{GEO_SOURCE_BY_ID.get(reference.sourceId)?.publisher} ↗</a>)}</li>)}</ul>
+  <p class="geo-defense-limit">Documented capability does not establish nationwide adoption or a measured rate of attacks blocked.</p>
+</section>

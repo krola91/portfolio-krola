@@ -1,0 +1,23 @@
+---
+import type { GeoCountrySummary } from "../../../types/geopolitical-risk";
+import { GEO_POSITIONS } from "../../../data/cyber/geopolitical-risk/country-profiles";
+interface Props { countries: GeoCountrySummary[]; year: number; }
+const { countries, year } = Astro.props;
+const names = new Map(GEO_POSITIONS.map((country) => [country.code, country.name]));
+const maximum = countries[0]?.reportedIncidents ?? 1;
+---
+<aside class="geo-ranking" aria-labelledby="geo-ranking-title">
+  <header><p class="geo-eyebrow">TARGET INDEX / {String(countries.length).padStart(2, "0")}</p><h2 id="geo-ranking-title">Most documented <br /><em>targets.</em></h2><p>Reported incidents · {year}</p></header>
+  {countries.length ? <ol class="geo-country-list">
+    {countries.map((country) => <li>
+      <a href={`#geo-profile-${country.countryCode}`} data-geo-country={country.countryCode} aria-haspopup="dialog">
+        <span class="geo-country-rank">{String(country.rank).padStart(2, "0")}</span>
+        <span class="geo-country-name"><strong>{names.get(country.countryCode) ?? country.countryCode}</strong><small>{country.countryCode}<span data-geo-selection-label>EXPLORE</span></small></span>
+        <span class="geo-country-count">{country.reportedIncidents}<span aria-hidden="true">↗</span></span>
+        <i class="geo-country-bar" style={`--share:${country.reportedIncidents / maximum * 100}%`} aria-hidden="true"></i>
+      </a>
+    </li>)}
+  </ol> : <p>No comparable country records are available in this edition.</p>}
+  <p class="geo-ranking-note">Select a country to explore attacks and cyber defense.</p>
+  <p class="geo-ranking-foot">REPORTED EVIDENCE ≠ ALL ATTACKS</p>
+</aside>

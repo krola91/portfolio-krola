@@ -1,11 +1,15 @@
 ---
 import { ACTORS } from "../../data/cyber/threat-actors/actors";
+import geoSummary from "../../data/cyber/geopolitical-risk/generated/summary.json";
+import { GEO_POSITIONS } from "../../data/cyber/geopolitical-risk/country-profiles";
 ---
 <dialog class="command-palette" data-command-dialog aria-labelledby="command-title">
 	<form method="dialog" class="command-palette__surface">
 		<header><span aria-hidden="true">⌘</span><div><p>System command</p><h2 id="command-title">Navigate the observatory</h2></div><button value="cancel" aria-label="Close command palette">Esc</button></header>
 		<label><span class="sr-only">Search commands</span><input type="search" placeholder="Type a command…" autocomplete="off" data-command-search /></label>
 		<div class="command-list" role="listbox" aria-label="Available commands">
+			<button type="button" role="option" aria-selected="false" data-command="geopolitics"><span><i>03</i>Open Geopolitical Risk</span><kbd>GEO</kbd></button>
+			{geoSummary.countries.map((country) => <button type="button" role="option" aria-selected="false" data-command={`geo:${country.countryCode}`}><span><i>{country.countryCode}</i>Explore {GEO_POSITIONS.find((position) => position.code === country.countryCode)?.name} · attacks & defense</span><kbd>↗</kbd></button>)}
 			<button type="button" role="option" aria-selected="false" data-command="actors"><span><i>02</i>Open Threat Actor Tracking</span><kbd>TA</kbd></button>
 			<button type="button" role="option" aria-selected="false" data-command="actor-index"><span><i>IDX</i>Open Actor Index</span><kbd>8</kbd></button>
 			<button type="button" role="option" aria-selected="false" data-command="actor-search"><span><i>FIND</i>Search actors</span><kbd>/</kbd></button>

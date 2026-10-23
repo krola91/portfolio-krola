@@ -9,6 +9,6 @@ export const observatoryModules: ObservatoryModule[] = [
 		statusLabel: "CISA KEV ONLINE",
 	},
 	{ key: "actors", index: "02", label: "THREAT ACTOR TRACKING", status: "active", statusLabel: "ACTOR INDEX ONLINE" },
-	{ index: "03", label: "GEOPOLITICAL RISK", status: "locked", statusLabel: "LOCKED" },
+	{ key: "geopolitics", index: "03", label: "GEOPOLITICAL RISK", status: "online", statusLabel: "COUNTRY EXPOSURE" },
 	{ index: "04", label: "MALWARE ANALYSIS", status: "queued", statusLabel: "QUEUED" },
 ];

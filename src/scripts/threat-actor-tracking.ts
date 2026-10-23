@@ -14,7 +14,7 @@ export function initThreatActorTracking(root: HTMLElement) {
 	const knownIds = records.map((record) => record.id);
 	const form = query<HTMLFormElement>("[data-actor-filter-form]");
 	const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-	let activeModule: "actors" | "vulnerabilities" = "actors";
+	let activeModule: "actors" | "vulnerabilities" | null = "actors";
 	let activeId: string | null = null;
 	let activeReference: string | null = null;
 	let returnFocus: HTMLElement | null = null;
@@ -58,10 +58,9 @@ export function initThreatActorTracking(root: HTMLElement) {
 			}
 		}
 	};
-	const applyRoute = (focus = true) => {
-		const route = parseActorRoute(window.location.hash, knownIds); const previousId = activeId; const previousModule = activeModule;
+	const applyRoute = (hash: string, focus = true) => {
+		const route = parseActorRoute(hash, knownIds); const previousId = activeId; const previousModule = activeModule;
 		activeModule = route.module; activeId = route.actorId;
-		all<HTMLElement>("[data-module-view]").forEach((view) => { view.hidden = view.dataset.moduleView !== route.module; });
 		const reference = !route.actorId && ["actors-methodology", "actors-sources"].includes(route.section ?? "") ? route.section : null;
 		const previousReference = activeReference; activeReference = reference;
 		const index = query<HTMLElement>("[data-actor-index]"); if (index) index.hidden = route.actorId !== null || reference !== null;
@@ -73,10 +72,6 @@ export function initThreatActorTracking(root: HTMLElement) {
 			if (selected && previousId !== route.actorId && !reducedMotion.matches) { dossier.classList.add("is-opening"); later(() => dossier.classList.remove("is-opening"), 700); }
 			for (const link of dossier.querySelectorAll<HTMLAnchorElement>("[data-dossier-section]")) { if (link.dataset.dossierSection === (route.section ?? "overview")) link.setAttribute("aria-current", "location"); else link.removeAttribute("aria-current"); }
 		}
-		all<HTMLElement>("[data-module-key]").forEach((button) => { const selected = button.dataset.moduleKey === route.module; button.classList.toggle("is-active", selected); if (selected) button.setAttribute("aria-current", "page"); else button.removeAttribute("aria-current"); });
-		all<HTMLElement>("[data-source-module]").forEach((element) => { element.hidden = element.dataset.sourceModule !== route.module; });
-		const subtitle = query<HTMLElement>("[data-header-subtitle]"); if (subtitle) subtitle.textContent = route.module === "actors" ? "LAB/EXP-002 · Curated actor evidence interface" : "LAB/EXP-001 · CISA KEV evidence interface";
-		const skip = query<HTMLAnchorElement>(".skip-link"); if (skip) skip.href = route.module === "actors" ? (route.actorId ? `#dossier-${route.actorId}` : "#actor-index-title") : "#vulnerability-title";
 		calibrateIndex();
 		const announcement = query<HTMLElement>("[data-actor-announcement]"); if (announcement) announcement.textContent = route.invalidActor ? "Unknown record. Showing the curated actor index." : route.actorId ? `Dossier opened: ${records.find((actor) => actor.id === route.actorId)?.displayName}. Public sourced records only.` : reference ? "Actor reference view opened." : `Actor record selected: ${records.find((actor) => actor.id === selectedIndexId)?.displayName ?? "No matching records"}.`;
 		if (route.section) { const targetId = route.actorId ? `${route.actorId}-${route.section}` : route.section; query<HTMLElement>(`[id='${targetId}']`)?.scrollIntoView({ behavior: behavior(), block: "start" }); }
@@ -87,13 +82,10 @@ export function initThreatActorTracking(root: HTMLElement) {
 			else query<HTMLElement>(route.actorId ? `#dossier-${route.actorId}` : route.module === "actors" ? "#actor-index-title" : "#vulnerability-title")?.focus({ preventScroll: true });
 		}
 	};
-	const navigate = (hash: string) => { if (window.location.hash === hash) applyRoute(true); else window.location.hash = hash; };
+	const navigate = (hash: string) => { if (window.location.hash === hash) applyRoute(hash, true); else window.location.hash = hash; };
 	const searchActors = () => { navigate("#actors"); later(() => { const popup = query<HTMLDetailsElement>("[data-actor-filter-popup]"); if (popup) popup.open = true; query<HTMLInputElement>("[data-actor-search-input]")?.focus({ preventScroll: true }); }, 80); };
 	root.addEventListener("click", (event) => {
 		const target = event.target; if (!(target instanceof Element)) return;
-		const skip = target.closest<HTMLAnchorElement>(".skip-link");
-		if (skip) { event.preventDefault(); const heading = query<HTMLElement>(skip.hash); heading?.scrollIntoView({ block: "start", behavior: "instant" }); heading?.focus({ preventScroll: true }); return; }
-		const module = target.closest<HTMLElement>("[data-module-key]"); if (module?.dataset.moduleKey) { navigate(`#${module.dataset.moduleKey}`); return; }
 		const tab = target.closest<HTMLButtonElement>("[data-actor-tab]"); if (tab && !tab.disabled) { navigate(actorIndexHash(tab.dataset.actorTab ?? "")); return; }
 		const open = target.closest<HTMLAnchorElement>("[data-actor-open]"); if (open && !event.ctrlKey && !event.metaKey && !event.shiftKey && event.button === 0) returnFocus = open;
 		const popup = query<HTMLDetailsElement>("[data-actor-filter-popup]"); if (popup?.open && !target.closest("[data-actor-filter-popup]")) popup.open = false;
@@ -108,7 +100,6 @@ export function initThreatActorTracking(root: HTMLElement) {
 		}
 		if (event.key === "Escape") { const popup = query<HTMLDetailsElement>("[data-actor-filter-popup]"); if (popup?.open) { popup.open = false; popup.querySelector<HTMLElement>("summary")?.focus(); } }
 	}, { signal: lifecycle.signal });
-	window.addEventListener("hashchange", () => applyRoute(true), { signal: lifecycle.signal });
 	form?.addEventListener("submit", (event) => event.preventDefault(), { signal: lifecycle.signal });
 	form?.addEventListener("input", () => renderFilters(true), { signal: lifecycle.signal });
 	form?.addEventListener("change", () => renderFilters(true), { signal: lifecycle.signal });
@@ -116,16 +107,16 @@ export function initThreatActorTracking(root: HTMLElement) {
 	query<HTMLButtonElement>("[data-actor-empty-reset]")?.addEventListener("click", () => form?.reset(), { signal: lifecycle.signal });
 	root.addEventListener("observatory-ready", calibrateIndex, { signal: lifecycle.signal });
 	window.addEventListener("pagehide", (event) => { timers.forEach((id) => window.clearTimeout(id)); timers.clear(); if (!event.persisted) lifecycle.abort(); });
-	renderFilters(); applyRoute(false);
+	renderFilters();
 	return {
-		getActiveModule: () => activeModule,
+		applyRoute,
+		knownIds,
+		deactivate: () => { activeModule = null; },
 		focusSearch: () => activeModule === "actors" ? searchActors() : query<HTMLInputElement>("[data-search-input]")?.focus(),
 		runCommand: (command: string): boolean => {
 			if (command === "actors" || command === "actor-index") { navigate("#actors"); return true; }
-			if (command === "vulnerabilities") { navigate("#vulnerabilities"); return true; }
 			if (command === "actor-search") { searchActors(); return true; }
 			if (command.startsWith("actor:")) { const id = command.slice(6); if (knownIds.includes(id)) { returnFocus = query<HTMLElement>(`[data-actor-open='${id}']`); navigate(actorHash(id)); } return true; }
-			if (command === "module-methodology") { navigate(activeModule === "actors" ? "#actors-methodology" : "#methodology"); return true; }
 			if (command === "source-log") { navigate(activeId ? actorHash(activeId, "sources") : "#actors-sources"); return true; }
 			return false;
 		},

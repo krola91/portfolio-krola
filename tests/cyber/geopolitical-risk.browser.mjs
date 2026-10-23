@@ -1,0 +1,93 @@
+import assert from "node:assert/strict";
+import { createRequire } from "node:module";
+import { mkdir, writeFile, rm } from "node:fs/promises";
+import { resolve } from "node:path";
+
+const require = createRequire(import.meta.url);
+const { chromium } = require(process.env.KROLA_QA_PLAYWRIGHT || "playwright");
+const browser = await chromium.launch({ headless: true, ...(process.env.KROLA_QA_BROWSER_EXE ? { executablePath: process.env.KROLA_QA_BROWSER_EXE } : {}) });
+const base = process.env.KROLA_QA_URL || "http://127.0.0.1:4323/cyber-observatory";
+const directory = resolve(".cache/geopolitics/qa"); await mkdir(directory, { recursive: true });
+const results = []; const errors = [];
+const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+page.on("pageerror", (error) => errors.push(error.message));
+const capture = async (name) => page.screenshot({ path: resolve(directory, `${name}.png`), fullPage: false });
+try {
+  await page.goto(`${base}#geopolitics`); await page.waitForSelector(".has-globe");
+  await page.locator("[data-boot-sequence]").waitFor({ state: "hidden" });
+  await page.evaluate(() => document.fonts.ready);
+  await page.waitForFunction(() => document.querySelector('#geopolitics-title').getBoundingClientRect().top >= document.querySelector('.obs-header').getBoundingClientRect().bottom);
+  await capture("desktop-1440");
+  assert.equal(await page.locator(".geo-country-list li").count(), 8);
+  assert.equal(await page.locator("[data-geo-dialog]").evaluate((dialog) => dialog.open), false);
+  const names = await page.locator(".geo-country-name strong").allTextContents();
+  const rows = page.locator(".geo-country-list [data-geo-country]");
+  for (let index = 0; index < 8; index++) {
+    await rows.nth(index).click(); const dialog = page.locator("[data-geo-dialog]"); await dialog.waitFor({ state: "visible" });
+    assert.equal(await dialog.locator("[data-geo-country-title]").textContent(), names[index]);
+    await dialog.locator('[data-geo-tab="defense"]').click();
+    await dialog.locator('[data-geo-tabpanel="defense"]').waitFor({ state: "visible" });
+    assert.ok(await dialog.locator(".geo-defense-measures li").count() >= 3);
+    if (index === 0) await capture("desktop-defense");
+    await page.keyboard.press("Escape"); await dialog.waitFor({ state: "hidden" });
+    assert.equal(await rows.nth(index).evaluate((row) => document.activeElement === row), true);
+  }
+  results.push("All eight country briefs, tabs, Escape and focus return passed.");
+  await rows.nth(1).click(); await page.locator("[data-geo-dialog]").waitFor({ state: "visible" });
+  await page.locator('[data-geo-dialog] [data-geo-tab="attacks"]').focus(); await page.keyboard.press("ArrowRight");
+  await page.waitForURL(/\/defense$/); await page.waitForFunction(() => document.querySelector('[data-geo-dialog] [data-geo-tab="defense"]')?.getAttribute("aria-selected") === "true");
+  await page.goBack(); await page.waitForURL(/country\/FR$/); await page.waitForFunction(() => document.querySelector('[data-geo-dialog] [data-geo-tab="attacks"]')?.getAttribute("aria-selected") === "true");
+  await page.reload(); await page.locator("[data-geo-dialog]").waitFor({ state: "visible" });
+  assert.equal(await page.locator("[data-geo-country-title]").textContent(), "France");
+  await page.locator("[data-geo-close]").click(); await page.waitForURL(/#geopolitics$/);
+  await page.goto(`${base}#geopolitics/country/ZZ`); await page.locator("[data-geo-route-notice]").waitFor({ state: "visible" });
+  assert.equal(await page.locator("[data-geo-dialog]").evaluate((dialog) => dialog.open), false);
+  await page.goto(`${base}#geopolitics`); await page.waitForSelector(".has-globe");
+  const marker = page.locator("[data-geo-marker]:visible").first(); const markerCode = await marker.getAttribute("data-geo-marker");
+  await marker.click(); await page.waitForURL(new RegExp(`country/${markerCode}$`)); await page.locator("[data-geo-dialog]").waitFor({ state: "visible" }); await page.keyboard.press("Escape");
+  await page.locator("[data-geo-dialog]").waitFor({ state: "hidden" });
+  await page.keyboard.press("/"); await page.locator("[data-command-dialog]").waitFor({ state: "visible", timeout: 3000 });
+  await page.locator('[data-command="geo:CA"]').click(); await page.waitForURL(/country\/CA$/); await page.locator("[data-geo-dialog]").waitFor({ state: "visible" });
+  assert.equal(await page.locator("[data-geo-country-title]").textContent(), "Canada"); await page.keyboard.press("Escape"); await page.locator("[data-geo-dialog]").waitFor({ state: "hidden" });
+  results.push("Deep links, invalid country, history, reload, markers and command palette passed.");
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.locator('[data-geo-reset]').click(); const beforeRotate = await page.locator('[data-geo-canvas]').evaluate((canvas) => canvas.toDataURL());
+  await page.locator('[data-geo-rotate="1"]').click(); assert.notEqual(await page.locator('[data-geo-canvas]').evaluate((canvas) => canvas.toDataURL()), beforeRotate);
+  await page.locator('[data-geo-reset]').click(); assert.equal(await page.locator('[data-geo-canvas]').evaluate((canvas) => canvas.toDataURL()), beforeRotate);
+  const stage = await page.locator('[data-geo-globe-stage]').boundingBox(); await page.mouse.move(stage.x + stage.width * .5, stage.y + stage.height * .75); await page.mouse.down(); await page.mouse.move(stage.x + stage.width * .65, stage.y + stage.height * .75, { steps: 8 }); await page.mouse.up();
+  await page.waitForFunction((previous) => document.querySelector('[data-geo-canvas]').toDataURL() !== previous, beforeRotate);
+  results.push("Globe rotation buttons, reset and pointer drag passed.");
+  for (const [width, height] of [[1280, 800], [768, 1024], [360, 800]]) {
+    await page.setViewportSize({ width, height }); await page.goto(`${base}#geopolitics`); await page.waitForSelector(".has-globe");
+    await page.waitForFunction(() => { const rail = document.querySelector('.module-nav__rail').getBoundingClientRect(); const active = document.querySelector('[data-module-key="geopolitics"]').getBoundingClientRect(); return active.left >= rail.left - 1 && active.right <= rail.right + 1; });
+    const dimensions = await page.evaluate(() => ({ viewport: innerWidth, document: document.documentElement.scrollWidth }));
+    assert.ok(dimensions.document <= dimensions.viewport + 1, `Horizontal overflow at ${width}: ${JSON.stringify(dimensions)}`);
+    const containment = await page.locator('.geo-command-surface').evaluate((surface) => ({ surfaceBottom: surface.getBoundingClientRect().bottom, rankingBottom: surface.querySelector('.geo-ranking-foot').getBoundingClientRect().bottom }));
+    assert.ok(containment.rankingBottom <= containment.surfaceBottom + 1, `Ranking exceeds its border at ${width}`);
+    assert.equal(await page.locator(".geo-country-list a").count(), 8); await capture(`viewport-${width}`);
+    await page.locator('.geo-country-list [data-geo-country="US"]').click(); await page.locator("[data-geo-dialog]").waitFor({ state: "visible" });
+    await capture(`drawer-${width}`); await page.keyboard.press("Escape"); await page.locator("[data-geo-dialog]").waitFor({ state: "hidden" });
+  }
+  await page.setViewportSize({ width: 720, height: 450 }); await page.goto(`${base}#geopolitics`); await page.waitForSelector(".has-globe"); await capture("zoom-200-equivalent");
+  assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
+  await page.emulateMedia({ reducedMotion: "reduce" }); await page.goto(`${base}#geopolitics/country/IT/defense`); await page.locator("[data-geo-dialog]").waitFor({ state: "visible" }); await page.keyboard.press("Escape");
+  results.push("360, 768, 1280, 1440, 200% layout equivalent and reduced motion passed.");
+  await page.setViewportSize({ width: 1440, height: 900 }); await page.goto(`${base}#actors`); await page.getByRole("tab", { name: "Alexsey Belan", exact: true }).click(); await page.waitForURL(/#actors\/belan$/);
+  await page.locator('[data-actor-panel="belan"] [data-actor-open="belan"]').first().click(); await page.waitForURL(/#actor\/belan$/);
+  await page.locator('#dossier-belan').waitFor({ state: "visible" });
+  await page.locator('[data-module-key="vulnerabilities"]').click(); await page.waitForURL(/#vulnerabilities$/);
+  await page.locator('[data-search-input]').fill('Cisco'); await page.waitForFunction(() => document.querySelector('[data-result-summary]')?.textContent.includes('17 of 250'));
+  await page.locator('[data-search-input]').fill(''); await page.locator('[data-page-next]').click();
+  assert.match(await page.locator('[data-page-summary]').textContent(), /Page 2/);
+  results.push("Actor selection/dossier and vulnerability search/pagination regressions passed.");
+  const fallback = await browser.newPage({ javaScriptEnabled: false, viewport: { width: 1280, height: 900 } });
+  await fallback.goto(`${base}#geopolitics`); assert.ok(await fallback.locator('[data-module-view="geopolitics"]').isVisible()); await fallback.locator('[data-geo-profile="US"] > summary').press('Enter'); assert.ok(await fallback.locator('[data-geo-country-content="US"]').isVisible()); await fallback.screenshot({ path: resolve(directory, 'no-javascript.png') }); await fallback.close();
+  const failedCanvas = await browser.newPage({ viewport: { width: 1280, height: 900 } });
+  await failedCanvas.addInitScript(() => { HTMLCanvasElement.prototype.getContext = () => null; });
+  await failedCanvas.goto(`${base}#geopolitics`); await failedCanvas.locator('[data-geo-globe-state]').filter({ hasText: 'STATIC MAP' }).waitFor(); await failedCanvas.locator('.geo-country-list [data-geo-country="FR"]').click(); await failedCanvas.locator('[data-geo-dialog]').waitFor({ state: 'visible' }); await failedCanvas.close();
+  results.push("No-JavaScript profiles and failed-canvas fallback passed.");
+  assert.deepEqual(errors, []); results.push("No browser runtime errors.");
+  await rm(resolve(directory, 'failure-state.json'), { force: true }); await rm(resolve(directory, 'failure.png'), { force: true });
+} catch (error) { await capture("failure"); await writeFile(resolve(directory, "failure-state.json"), JSON.stringify(await page.evaluate(() => ({ hash: location.hash, active: document.activeElement?.outerHTML, dialogs: [...document.querySelectorAll('dialog')].map((dialog) => ({ class: dialog.className, open: dialog.open })) })), null, 2)); throw error; }
+finally { await writeFile(resolve(directory, "results.json"), JSON.stringify({ results, errors }, null, 2)); await browser.close(); }
+console.log(results.join("\n"));

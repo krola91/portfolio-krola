@@ -1,0 +1,27 @@
+---
+import type { GeoCountrySummary } from "../../../types/geopolitical-risk";
+import { GEO_POSITIONS } from "../../../data/cyber/geopolitical-risk/country-profiles";
+interface Props { countries: GeoCountrySummary[]; }
+const { countries } = Astro.props;
+const positions = countries.map((country) => ({ ...GEO_POSITIONS.find((position) => position.code === country.countryCode)!, rank: country.rank }));
+---
+<figure class="geo-globe" aria-labelledby="geo-globe-caption" data-geo-globe data-geo-positions={JSON.stringify(positions)}>
+  <div class="geo-globe-register"><span>GEOGRAPHIC FIELD / ORTHOGRAPHIC</span><span>01 : 110M</span></div>
+  <div class="geo-globe-stage" data-geo-globe-stage>
+    <img class="geo-globe-fallback" src="/geo/geopolitical-risk/globe-fallback.svg" alt="Monochrome Bayer-dithered Earth showing the Americas, Europe and Africa. Select countries from the adjacent list." width="560" height="560" />
+    <canvas data-geo-canvas aria-hidden="true" width="280" height="280"></canvas>
+    <svg class="geo-globe-leaders" data-geo-leaders viewBox="0 0 1000 1000" aria-hidden="true"></svg>
+    <div class="geo-globe-markers" data-geo-markers>
+      {positions.map((position) => <button type="button" data-geo-marker={position.code} data-geo-country={position.code} aria-label={`Explore ${position.name}, rank ${position.rank}`} hidden><span>{String(position.rank).padStart(2, "0")}</span>{position.code}</button>)}
+    </div>
+    <span class="geo-globe-axis geo-globe-axis--north" aria-hidden="true">N / 90°</span>
+    <span class="geo-globe-axis geo-globe-axis--west" aria-hidden="true">W</span>
+    <span class="geo-globe-axis geo-globe-axis--east" aria-hidden="true">E</span>
+  </div>
+  <div class="geo-globe-controls" data-geo-globe-controls hidden>
+    <div><button type="button" data-geo-rotate="-1" aria-label="Rotate globe west">←</button><button type="button" data-geo-rotate="1" aria-label="Rotate globe east">→</button></div>
+    <button type="button" data-geo-reset><span aria-hidden="true">↺</span> RESET VIEW</button>
+    <span>DRAG TO ROTATE</span>
+  </div>
+  <figcaption id="geo-globe-caption"><span data-geo-globe-state>COUNTRY POSITIONS · NOT INCIDENT LOCATIONS</span><span>Earth pixels show geography, not attack volume.</span></figcaption>
+</figure>

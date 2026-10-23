@@ -1,0 +1,103 @@
+{
+  "datasetId": "eurepoc-1.3.2",
+  "sourceKind": "RESEARCH_DATASET",
+  "version": "1.3.2",
+  "sourceUrl": "https://zenodo.org/records/14965395",
+  "licenseId": "CC-BY-NC-4.0",
+  "attribution": "Zettl-Schabath, K. et al. (2025). Global Dataset of Cyber Incidents (1.3.2). EuRepoC. https://doi.org/10.5281/zenodo.14965395. Local normalized and capped derivative.",
+  "generatedAt": "2026-10-23T22:58:24.358Z",
+  "sourceCheckedAt": "2026-10-23",
+  "coverage": {
+    "start": "2024-01-01",
+    "end": "2024-12-31",
+    "year": 2024,
+    "coveredMonths": [
+      "2024-01",
+      "2024-02",
+      "2024-03",
+      "2024-04",
+      "2024-05",
+      "2024-06",
+      "2024-07",
+      "2024-08",
+      "2024-09",
+      "2024-10",
+      "2024-11",
+      "2024-12"
+    ]
+  },
+  "corpusStart": "2000-01-01",
+  "corpusEnd": "2024-12-31",
+  "hash": "fd310f198d224723bc51c67d3e774c9001b59ceca136b3ca7b4ef2157029e16f",
+  "summaryHash": "e4dcf6e445cbd7b2d339571d0ae8e3b71c5e6ad966d32f9be7fb69eb71ebf7c4",
+  "sourceFiles": [
+    {
+      "name": "eurepoc_global_dataset_1_3.csv",
+      "md5": "46d5006f6211d15c87fccb5a38b66626",
+      "sha256": "a88ae18a312d2877e70c37856c41e06096f93a13f1e9a306b4fae9eb1ad5c7ce"
+    },
+    {
+      "name": "eurepoc_receiver_dataset_1.3.csv",
+      "md5": "9368db87b618c3b70a245302b3c66d97",
+      "sha256": "1f1bcea92eaef8c842afbf7bf2408e7222526dc1d41af66c5a8e26c2feaedb78"
+    }
+  ],
+  "validation": {
+    "incidentCount": 3414,
+    "receiverCount": 12180,
+    "orphanReceiverCount": 0,
+    "duplicateHeaders": [
+      "initiator_country",
+      "initiator_category"
+    ],
+    "unmappedLabels": [
+      "",
+      "Africa",
+      "Asia (region)",
+      "Balkans (region)",
+      "Caucasus",
+      "Central America (region)",
+      "Central Asia (region)",
+      "EU (institutions)",
+      "EU (region)",
+      "Eastern Asia (region)",
+      "Eastern Europe",
+      "Europe (region)",
+      "Global (region)",
+      "Gulf Countries (region)",
+      "ISIS",
+      "International Association of Athletics Federations",
+      "Interpol",
+      "Mena Region (region)",
+      "Middle East (region)",
+      "NATO (institutions)",
+      "NATO (region)",
+      "North Africa (region)",
+      "North America",
+      "Northeast Asia (region)",
+      "Northern Europe",
+      "Not available",
+      "Oceania (region)",
+      "Organization for Security and Cooperation in Europe",
+      "South America",
+      "South Asia (region)",
+      "South China Sea (region)",
+      "Southeast Asia (region)",
+      "UNICEF",
+      "United Nations",
+      "United Nations Economic and Social Council",
+      "United Nations Environment Programme",
+      "United Nations Organization",
+      "Unknown",
+      "Western Europe",
+      "World Anti-Doping Agency"
+    ],
+    "invalidDateCount": 0,
+    "undatedIncidentCount": 92
+  },
+  "retention": {
+    "maxPerCountry": 50,
+    "retainedIncidents": 1767,
+    "retainedCountryPairs": 2576
+  }
+}

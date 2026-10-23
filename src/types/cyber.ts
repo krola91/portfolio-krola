@@ -106,8 +106,9 @@ export type LandscapeSignal = {
 	dominantVendors: string[];
 };
 
+export type ObservatoryModuleKey = "actors" | "vulnerabilities" | "geopolitics";
 export type ObservatoryModule = {
-	key?: "actors" | "vulnerabilities";
+	key?: ObservatoryModuleKey;
 	index: string;
 	label: string;
 	status: "active" | "online" | "upcoming" | "locked" | "queued";

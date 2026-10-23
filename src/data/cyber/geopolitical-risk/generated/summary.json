@@ -1,0 +1,7584 @@
+{
+  "coverage": {
+    "start": "2024-01-01",
+    "end": "2024-12-31",
+    "year": 2024,
+    "coveredMonths": [
+      "2024-01",
+      "2024-02",
+      "2024-03",
+      "2024-04",
+      "2024-05",
+      "2024-06",
+      "2024-07",
+      "2024-08",
+      "2024-09",
+      "2024-10",
+      "2024-11",
+      "2024-12"
+    ]
+  },
+  "globalIncidentCount": 700,
+  "population": [
+    {
+      "countryCode": "US",
+      "rank": 1,
+      "reportedIncidents": 177,
+      "retainedIncidents": 50,
+      "attackTypeIds": [
+        "data-theft",
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 32
+        },
+        {
+          "month": "2024-02",
+          "count": 17
+        },
+        {
+          "month": "2024-03",
+          "count": 12
+        },
+        {
+          "month": "2024-04",
+          "count": 19
+        },
+        {
+          "month": "2024-05",
+          "count": 13
+        },
+        {
+          "month": "2024-06",
+          "count": 11
+        },
+        {
+          "month": "2024-07",
+          "count": 13
+        },
+        {
+          "month": "2024-08",
+          "count": 22
+        },
+        {
+          "month": "2024-09",
+          "count": 9
+        },
+        {
+          "month": "2024-10",
+          "count": 11
+        },
+        {
+          "month": "2024-11",
+          "count": 13
+        },
+        {
+          "month": "2024-12",
+          "count": 5
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 177,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 14.75
+    },
+    {
+      "countryCode": "FR",
+      "rank": 2,
+      "reportedIncidents": 52,
+      "retainedIncidents": 50,
+      "attackTypeIds": [
+        "data-theft",
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 6
+        },
+        {
+          "month": "2024-02",
+          "count": 4
+        },
+        {
+          "month": "2024-03",
+          "count": 4
+        },
+        {
+          "month": "2024-04",
+          "count": 6
+        },
+        {
+          "month": "2024-05",
+          "count": 4
+        },
+        {
+          "month": "2024-06",
+          "count": 4
+        },
+        {
+          "month": "2024-07",
+          "count": 2
+        },
+        {
+          "month": "2024-08",
+          "count": 7
+        },
+        {
+          "month": "2024-09",
+          "count": 4
+        },
+        {
+          "month": "2024-10",
+          "count": 5
+        },
+        {
+          "month": "2024-11",
+          "count": 5
+        },
+        {
+          "month": "2024-12",
+          "count": 1
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 52,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 4.333333333333333
+    },
+    {
+      "countryCode": "DE",
+      "rank": 3,
+      "reportedIncidents": 51,
+      "retainedIncidents": 50,
+      "attackTypeIds": [
+        "data-theft",
+        "disruption",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse",
+        "not-available",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 6
+        },
+        {
+          "month": "2024-02",
+          "count": 11
+        },
+        {
+          "month": "2024-03",
+          "count": 4
+        },
+        {
+          "month": "2024-04",
+          "count": 2
+        },
+        {
+          "month": "2024-05",
+          "count": 2
+        },
+        {
+          "month": "2024-06",
+          "count": 3
+        },
+        {
+          "month": "2024-07",
+          "count": 5
+        },
+        {
+          "month": "2024-08",
+          "count": 2
+        },
+        {
+          "month": "2024-09",
+          "count": 5
+        },
+        {
+          "month": "2024-10",
+          "count": 6
+        },
+        {
+          "month": "2024-11",
+          "count": 3
+        },
+        {
+          "month": "2024-12",
+          "count": 2
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 51,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 4.25
+    },
+    {
+      "countryCode": "RU",
+      "rank": 4,
+      "reportedIncidents": 27,
+      "retainedIncidents": 27,
+      "attackTypeIds": [
+        "data-theft",
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 5
+        },
+        {
+          "month": "2024-02",
+          "count": 2
+        },
+        {
+          "month": "2024-03",
+          "count": 1
+        },
+        {
+          "month": "2024-04",
+          "count": 2
+        },
+        {
+          "month": "2024-05",
+          "count": 4
+        },
+        {
+          "month": "2024-06",
+          "count": 2
+        },
+        {
+          "month": "2024-07",
+          "count": 4
+        },
+        {
+          "month": "2024-08",
+          "count": 4
+        },
+        {
+          "month": "2024-09",
+          "count": 1
+        },
+        {
+          "month": "2024-10",
+          "count": 2
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 27,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 2.25
+    },
+    {
+      "countryCode": "GB",
+      "rank": 5,
+      "reportedIncidents": 26,
+      "retainedIncidents": 26,
+      "attackTypeIds": [
+        "data-theft",
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 3
+        },
+        {
+          "month": "2024-02",
+          "count": 1
+        },
+        {
+          "month": "2024-03",
+          "count": 2
+        },
+        {
+          "month": "2024-04",
+          "count": 1
+        },
+        {
+          "month": "2024-05",
+          "count": 2
+        },
+        {
+          "month": "2024-06",
+          "count": 3
+        },
+        {
+          "month": "2024-07",
+          "count": 3
+        },
+        {
+          "month": "2024-08",
+          "count": 3
+        },
+        {
+          "month": "2024-09",
+          "count": 6
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 1
+        },
+        {
+          "month": "2024-12",
+          "count": 1
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 26,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 2.1666666666666665
+    },
+    {
+      "countryCode": "ES",
+      "rank": 6,
+      "reportedIncidents": 23,
+      "retainedIncidents": 23,
+      "attackTypeIds": [
+        "data-theft",
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 4
+        },
+        {
+          "month": "2024-02",
+          "count": 2
+        },
+        {
+          "month": "2024-03",
+          "count": 3
+        },
+        {
+          "month": "2024-04",
+          "count": 2
+        },
+        {
+          "month": "2024-05",
+          "count": 1
+        },
+        {
+          "month": "2024-06",
+          "count": 3
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 1
+        },
+        {
+          "month": "2024-09",
+          "count": 4
+        },
+        {
+          "month": "2024-10",
+          "count": 1
+        },
+        {
+          "month": "2024-11",
+          "count": 1
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 23,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 1.9166666666666667
+    },
+    {
+      "countryCode": "CA",
+      "rank": 7,
+      "reportedIncidents": 20,
+      "retainedIncidents": 20,
+      "attackTypeIds": [
+        "data-theft",
+        "disruption",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 4
+        },
+        {
+          "month": "2024-02",
+          "count": 3
+        },
+        {
+          "month": "2024-03",
+          "count": 2
+        },
+        {
+          "month": "2024-04",
+          "count": 3
+        },
+        {
+          "month": "2024-05",
+          "count": 1
+        },
+        {
+          "month": "2024-06",
+          "count": 2
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 1
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 1
+        },
+        {
+          "month": "2024-11",
+          "count": 1
+        },
+        {
+          "month": "2024-12",
+          "count": 2
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 20,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 1.6666666666666667
+    },
+    {
+      "countryCode": "IT",
+      "rank": 8,
+      "reportedIncidents": 17,
+      "retainedIncidents": 17,
+      "attackTypeIds": [
+        "data-theft",
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 4
+        },
+        {
+          "month": "2024-02",
+          "count": 1
+        },
+        {
+          "month": "2024-03",
+          "count": 1
+        },
+        {
+          "month": "2024-04",
+          "count": 1
+        },
+        {
+          "month": "2024-05",
+          "count": 1
+        },
+        {
+          "month": "2024-06",
+          "count": 1
+        },
+        {
+          "month": "2024-07",
+          "count": 2
+        },
+        {
+          "month": "2024-08",
+          "count": 1
+        },
+        {
+          "month": "2024-09",
+          "count": 2
+        },
+        {
+          "month": "2024-10",
+          "count": 2
+        },
+        {
+          "month": "2024-11",
+          "count": 1
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 17,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 1.4166666666666667
+    },
+    {
+      "countryCode": "UA",
+      "rank": 9,
+      "reportedIncidents": 14,
+      "retainedIncidents": 14,
+      "attackTypeIds": [
+        "data-theft",
+        "disruption",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 4
+        },
+        {
+          "month": "2024-02",
+          "count": 3
+        },
+        {
+          "month": "2024-03",
+          "count": 3
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 1
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 2
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 1
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 14,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 1.1666666666666667
+    },
+    {
+      "countryCode": "MX",
+      "rank": 10,
+      "reportedIncidents": 13,
+      "retainedIncidents": 13,
+      "attackTypeIds": [
+        "data-theft",
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 2
+        },
+        {
+          "month": "2024-04",
+          "count": 1
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 2
+        },
+        {
+          "month": "2024-07",
+          "count": 2
+        },
+        {
+          "month": "2024-08",
+          "count": 2
+        },
+        {
+          "month": "2024-09",
+          "count": 1
+        },
+        {
+          "month": "2024-10",
+          "count": 1
+        },
+        {
+          "month": "2024-11",
+          "count": 1
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 13,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 1.0833333333333333
+    },
+    {
+      "countryCode": "CH",
+      "rank": 11,
+      "reportedIncidents": 12,
+      "retainedIncidents": 12,
+      "attackTypeIds": [
+        "data-theft",
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 3
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 1
+        },
+        {
+          "month": "2024-04",
+          "count": 1
+        },
+        {
+          "month": "2024-05",
+          "count": 2
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 2
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 1
+        },
+        {
+          "month": "2024-11",
+          "count": 1
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 12,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 1
+    },
+    {
+      "countryCode": "IN",
+      "rank": 12,
+      "reportedIncidents": 12,
+      "retainedIncidents": 12,
+      "attackTypeIds": [
+        "data-theft",
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 2
+        },
+        {
+          "month": "2024-03",
+          "count": 2
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 1
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 2
+        },
+        {
+          "month": "2024-08",
+          "count": 1
+        },
+        {
+          "month": "2024-09",
+          "count": 1
+        },
+        {
+          "month": "2024-10",
+          "count": 2
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 12,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 1
+    },
+    {
+      "countryCode": "JP",
+      "rank": 13,
+      "reportedIncidents": 12,
+      "retainedIncidents": 12,
+      "attackTypeIds": [
+        "data-theft",
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 2
+        },
+        {
+          "month": "2024-03",
+          "count": 1
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 2
+        },
+        {
+          "month": "2024-06",
+          "count": 1
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 1
+        },
+        {
+          "month": "2024-10",
+          "count": 3
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 12,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 1
+    },
+    {
+      "countryCode": "AR",
+      "rank": 14,
+      "reportedIncidents": 11,
+      "retainedIncidents": 11,
+      "attackTypeIds": [
+        "data-theft",
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 2
+        },
+        {
+          "month": "2024-03",
+          "count": 1
+        },
+        {
+          "month": "2024-04",
+          "count": 4
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 1
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 2
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 11,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.9166666666666666
+    },
+    {
+      "countryCode": "BE",
+      "rank": 15,
+      "reportedIncidents": 11,
+      "retainedIncidents": 11,
+      "attackTypeIds": [
+        "data-theft",
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 1
+        },
+        {
+          "month": "2024-03",
+          "count": 5
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 1
+        },
+        {
+          "month": "2024-06",
+          "count": 1
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 1
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 1
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 11,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.9166666666666666
+    },
+    {
+      "countryCode": "KR",
+      "rank": 16,
+      "reportedIncidents": 11,
+      "retainedIncidents": 11,
+      "attackTypeIds": [
+        "data-theft",
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 3
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 1
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 2
+        },
+        {
+          "month": "2024-07",
+          "count": 2
+        },
+        {
+          "month": "2024-08",
+          "count": 1
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 2
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 11,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.9166666666666666
+    },
+    {
+      "countryCode": "AU",
+      "rank": 17,
+      "reportedIncidents": 10,
+      "retainedIncidents": 10,
+      "attackTypeIds": [
+        "data-theft",
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 1
+        },
+        {
+          "month": "2024-03",
+          "count": 2
+        },
+        {
+          "month": "2024-04",
+          "count": 1
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 1
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 1
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 1
+        },
+        {
+          "month": "2024-11",
+          "count": 1
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 10,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.8333333333333334
+    },
+    {
+      "countryCode": "CN",
+      "rank": 18,
+      "reportedIncidents": 9,
+      "retainedIncidents": 9,
+      "attackTypeIds": [
+        "data-theft",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 2
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 1
+        },
+        {
+          "month": "2024-04",
+          "count": 2
+        },
+        {
+          "month": "2024-05",
+          "count": 1
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 2
+        },
+        {
+          "month": "2024-08",
+          "count": 1
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 9,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.75
+    },
+    {
+      "countryCode": "PH",
+      "rank": 19,
+      "reportedIncidents": 9,
+      "retainedIncidents": 9,
+      "attackTypeIds": [
+        "data-theft",
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 1
+        },
+        {
+          "month": "2024-03",
+          "count": 2
+        },
+        {
+          "month": "2024-04",
+          "count": 1
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 1
+        },
+        {
+          "month": "2024-07",
+          "count": 3
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 9,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.75
+    },
+    {
+      "countryCode": "TW",
+      "rank": 20,
+      "reportedIncidents": 9,
+      "retainedIncidents": 9,
+      "attackTypeIds": [
+        "data-theft",
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 3
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 2
+        },
+        {
+          "month": "2024-05",
+          "count": 1
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 2
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 1
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 9,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.75
+    },
+    {
+      "countryCode": "IL",
+      "rank": 21,
+      "reportedIncidents": 8,
+      "retainedIncidents": 8,
+      "attackTypeIds": [
+        "data-theft",
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 2
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 1
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 1
+        },
+        {
+          "month": "2024-11",
+          "count": 2
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 8,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.6666666666666666
+    },
+    {
+      "countryCode": "TR",
+      "rank": 22,
+      "reportedIncidents": 8,
+      "retainedIncidents": 8,
+      "attackTypeIds": [
+        "data-theft",
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 1
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 1
+        },
+        {
+          "month": "2024-09",
+          "count": 1
+        },
+        {
+          "month": "2024-10",
+          "count": 1
+        },
+        {
+          "month": "2024-11",
+          "count": 1
+        },
+        {
+          "month": "2024-12",
+          "count": 2
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 8,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.6666666666666666
+    },
+    {
+      "countryCode": "SG",
+      "rank": 23,
+      "reportedIncidents": 7,
+      "retainedIncidents": 7,
+      "attackTypeIds": [
+        "data-theft",
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 1
+        },
+        {
+          "month": "2024-06",
+          "count": 1
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 1
+        },
+        {
+          "month": "2024-09",
+          "count": 1
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 1
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 7,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.5833333333333334
+    },
+    {
+      "countryCode": "AE",
+      "rank": 24,
+      "reportedIncidents": 6,
+      "retainedIncidents": 6,
+      "attackTypeIds": [
+        "data-theft",
+        "data-theft-doxing",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 2
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 1
+        },
+        {
+          "month": "2024-04",
+          "count": 1
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 1
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 6,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.5
+    },
+    {
+      "countryCode": "CL",
+      "rank": 25,
+      "reportedIncidents": 6,
+      "retainedIncidents": 6,
+      "attackTypeIds": [
+        "data-theft",
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 2
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 1
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 1
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 6,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.5
+    },
+    {
+      "countryCode": "DK",
+      "rank": 26,
+      "reportedIncidents": 6,
+      "retainedIncidents": 6,
+      "attackTypeIds": [
+        "data-theft",
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 1
+        },
+        {
+          "month": "2024-03",
+          "count": 3
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 1
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 1
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 6,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.5
+    },
+    {
+      "countryCode": "IR",
+      "rank": 27,
+      "reportedIncidents": 6,
+      "retainedIncidents": 6,
+      "attackTypeIds": [
+        "data-theft",
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 1
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 2
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 1
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 6,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.5
+    },
+    {
+      "countryCode": "NL",
+      "rank": 28,
+      "reportedIncidents": 6,
+      "retainedIncidents": 6,
+      "attackTypeIds": [
+        "data-theft",
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 1
+        },
+        {
+          "month": "2024-03",
+          "count": 1
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 1
+        },
+        {
+          "month": "2024-06",
+          "count": 1
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 1
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 6,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.5
+    },
+    {
+      "countryCode": "SE",
+      "rank": 29,
+      "reportedIncidents": 6,
+      "retainedIncidents": 6,
+      "attackTypeIds": [
+        "data-theft",
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 2
+        },
+        {
+          "month": "2024-02",
+          "count": 3
+        },
+        {
+          "month": "2024-03",
+          "count": 1
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 6,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.5
+    },
+    {
+      "countryCode": "AT",
+      "rank": 30,
+      "reportedIncidents": 5,
+      "retainedIncidents": 5,
+      "attackTypeIds": [
+        "data-theft",
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 1
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 1
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 1
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 2
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 5,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.4166666666666667
+    },
+    {
+      "countryCode": "UY",
+      "rank": 31,
+      "reportedIncidents": 5,
+      "retainedIncidents": 5,
+      "attackTypeIds": [
+        "data-theft",
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 1
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 1
+        },
+        {
+          "month": "2024-09",
+          "count": 1
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 5,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.4166666666666667
+    },
+    {
+      "countryCode": "VE",
+      "rank": 32,
+      "reportedIncidents": 5,
+      "retainedIncidents": 5,
+      "attackTypeIds": [
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 1
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 3
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 5,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.4166666666666667
+    },
+    {
+      "countryCode": "CO",
+      "rank": 33,
+      "reportedIncidents": 4,
+      "retainedIncidents": 4,
+      "attackTypeIds": [
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 1
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 1
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 4,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.3333333333333333
+    },
+    {
+      "countryCode": "FI",
+      "rank": 34,
+      "reportedIncidents": 4,
+      "retainedIncidents": 4,
+      "attackTypeIds": [
+        "data-theft",
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 2
+        },
+        {
+          "month": "2024-02",
+          "count": 1
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 1
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 4,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.3333333333333333
+    },
+    {
+      "countryCode": "HR",
+      "rank": 35,
+      "reportedIncidents": 4,
+      "retainedIncidents": 4,
+      "attackTypeIds": [
+        "data-theft",
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 1
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 1
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 4,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.3333333333333333
+    },
+    {
+      "countryCode": "PK",
+      "rank": 36,
+      "reportedIncidents": 4,
+      "retainedIncidents": 4,
+      "attackTypeIds": [
+        "data-theft",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 1
+        },
+        {
+          "month": "2024-05",
+          "count": 1
+        },
+        {
+          "month": "2024-06",
+          "count": 1
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 1
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 4,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.3333333333333333
+    },
+    {
+      "countryCode": "VN",
+      "rank": 37,
+      "reportedIncidents": 4,
+      "retainedIncidents": 4,
+      "attackTypeIds": [
+        "data-theft",
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 1
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 1
+        },
+        {
+          "month": "2024-07",
+          "count": 2
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 4,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.3333333333333333
+    },
+    {
+      "countryCode": "EE",
+      "rank": 38,
+      "reportedIncidents": 3,
+      "retainedIncidents": 3,
+      "attackTypeIds": [
+        "data-theft",
+        "disruption",
+        "hijacking-with-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 1
+        },
+        {
+          "month": "2024-03",
+          "count": 1
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 3,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.25
+    },
+    {
+      "countryCode": "HU",
+      "rank": 39,
+      "reportedIncidents": 3,
+      "retainedIncidents": 3,
+      "attackTypeIds": [
+        "data-theft",
+        "data-theft-doxing",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 2
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 1
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 3,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.25
+    },
+    {
+      "countryCode": "ID",
+      "rank": 40,
+      "reportedIncidents": 3,
+      "retainedIncidents": 3,
+      "attackTypeIds": [
+        "data-theft",
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 1
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 1
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 3,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.25
+    },
+    {
+      "countryCode": "LB",
+      "rank": 41,
+      "reportedIncidents": 3,
+      "retainedIncidents": 3,
+      "attackTypeIds": [
+        "disruption",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 2
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 1
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 3,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.25
+    },
+    {
+      "countryCode": "PL",
+      "rank": 42,
+      "reportedIncidents": 3,
+      "retainedIncidents": 3,
+      "attackTypeIds": [
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 1
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 1
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 3,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.25
+    },
+    {
+      "countryCode": "RS",
+      "rank": 43,
+      "reportedIncidents": 3,
+      "retainedIncidents": 3,
+      "attackTypeIds": [
+        "data-theft",
+        "hijacking-with-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 1
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 1
+        },
+        {
+          "month": "2024-11",
+          "count": 1
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 3,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.25
+    },
+    {
+      "countryCode": "SI",
+      "rank": 44,
+      "reportedIncidents": 3,
+      "retainedIncidents": 3,
+      "attackTypeIds": [
+        "data-theft",
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 1
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 1
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 3,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.25
+    },
+    {
+      "countryCode": "BD",
+      "rank": 45,
+      "reportedIncidents": 2,
+      "retainedIncidents": 2,
+      "attackTypeIds": [
+        "hijacking-with-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 2
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 2,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.16666666666666666
+    },
+    {
+      "countryCode": "BR",
+      "rank": 46,
+      "reportedIncidents": 2,
+      "retainedIncidents": 2,
+      "attackTypeIds": [
+        "disruption",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 1
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 2,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.16666666666666666
+    },
+    {
+      "countryCode": "BY",
+      "rank": 47,
+      "reportedIncidents": 2,
+      "retainedIncidents": 2,
+      "attackTypeIds": [
+        "data-theft",
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 2
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 2,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.16666666666666666
+    },
+    {
+      "countryCode": "CR",
+      "rank": 48,
+      "reportedIncidents": 2,
+      "retainedIncidents": 2,
+      "attackTypeIds": [
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 1
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 2,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.16666666666666666
+    },
+    {
+      "countryCode": "GR",
+      "rank": 49,
+      "reportedIncidents": 2,
+      "retainedIncidents": 2,
+      "attackTypeIds": [
+        "data-theft",
+        "hijacking-with-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 2
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 2,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.16666666666666666
+    },
+    {
+      "countryCode": "HK",
+      "rank": 50,
+      "reportedIncidents": 2,
+      "retainedIncidents": 2,
+      "attackTypeIds": [
+        "data-theft",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 1
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 1
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 2,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.16666666666666666
+    },
+    {
+      "countryCode": "KH",
+      "rank": 51,
+      "reportedIncidents": 2,
+      "retainedIncidents": 2,
+      "attackTypeIds": [
+        "data-theft",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 1
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 2,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.16666666666666666
+    },
+    {
+      "countryCode": "LI",
+      "rank": 52,
+      "reportedIncidents": 2,
+      "retainedIncidents": 2,
+      "attackTypeIds": [
+        "disruption",
+        "hijacking-with-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 1
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 2,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.16666666666666666
+    },
+    {
+      "countryCode": "LU",
+      "rank": 53,
+      "reportedIncidents": 2,
+      "retainedIncidents": 2,
+      "attackTypeIds": [
+        "disruption"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 2
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 2,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.16666666666666666
+    },
+    {
+      "countryCode": "NC",
+      "rank": 54,
+      "reportedIncidents": 2,
+      "retainedIncidents": 2,
+      "attackTypeIds": [
+        "data-theft",
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 1
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 1
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 2,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.16666666666666666
+    },
+    {
+      "countryCode": "PE",
+      "rank": 55,
+      "reportedIncidents": 2,
+      "retainedIncidents": 2,
+      "attackTypeIds": [
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 1
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 2,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.16666666666666666
+    },
+    {
+      "countryCode": "PT",
+      "rank": 56,
+      "reportedIncidents": 2,
+      "retainedIncidents": 2,
+      "attackTypeIds": [
+        "data-theft",
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 1
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 2,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.16666666666666666
+    },
+    {
+      "countryCode": "PY",
+      "rank": 57,
+      "reportedIncidents": 2,
+      "retainedIncidents": 2,
+      "attackTypeIds": [
+        "data-theft",
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 1
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 2,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.16666666666666666
+    },
+    {
+      "countryCode": "SC",
+      "rank": 58,
+      "reportedIncidents": 2,
+      "retainedIncidents": 2,
+      "attackTypeIds": [
+        "disruption",
+        "hijacking-with-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 1
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 2,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.16666666666666666
+    },
+    {
+      "countryCode": "ZA",
+      "rank": 59,
+      "reportedIncidents": 2,
+      "retainedIncidents": 2,
+      "attackTypeIds": [
+        "data-theft",
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 1
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 1
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 2,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.16666666666666666
+    },
+    {
+      "countryCode": "AL",
+      "rank": 60,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "hijacking-without-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "AM",
+      "rank": 61,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "data-theft",
+        "hijacking-with-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "AO",
+      "rank": 62,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "disruption"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 1
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "BO",
+      "rank": 63,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "hijacking-with-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 1
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "CM",
+      "rank": 64,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "disruption",
+        "hijacking-with-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "CU",
+      "rank": 65,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "hijacking-without-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "CY",
+      "rank": 66,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "disruption"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 1
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "CZ",
+      "rank": 67,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "disruption"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "DM",
+      "rank": 68,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "data-theft",
+        "hijacking-with-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 1
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "DO",
+      "rank": 69,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "hijacking-with-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 1
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "EC",
+      "rank": 70,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "disruption"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 1
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "GD",
+      "rank": 71,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "disruption",
+        "hijacking-with-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 1
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "GN",
+      "rank": 72,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "hijacking-with-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 1
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "GT",
+      "rank": 73,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "HN",
+      "rank": 74,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "IQ",
+      "rank": 75,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "hijacking-without-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "IS",
+      "rank": 76,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "data-theft",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 1
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "KG",
+      "rank": 77,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "data-theft",
+        "hijacking-with-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "KW",
+      "rank": 78,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "disruption"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 1
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "KZ",
+      "rank": 79,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "data-theft",
+        "hijacking-with-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "LT",
+      "rank": 80,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "data-theft",
+        "disruption",
+        "hijacking-with-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 1
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "LV",
+      "rank": 81,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "hijacking-with-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 1
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "LY",
+      "rank": 82,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "disruption"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 1
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "MA",
+      "rank": 83,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "disruption"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 1
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "MD",
+      "rank": 84,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "disruption"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 1
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "MO",
+      "rank": 85,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "disruption"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "MT",
+      "rank": 86,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "disruption"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 1
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "MV",
+      "rank": 87,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "hijacking-with-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "MW",
+      "rank": 88,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 1
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "MY",
+      "rank": 89,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "data-theft-doxing",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 1
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "NA",
+      "rank": 90,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "data-theft-doxing",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 1
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "NI",
+      "rank": 91,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "NP",
+      "rank": 92,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "hijacking-with-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "NZ",
+      "rank": 93,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "data-theft-doxing",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 1
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "PR",
+      "rank": 94,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 1
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "PW",
+      "rank": 95,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 1
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "RE",
+      "rank": 96,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "data-theft"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 1
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "RO",
+      "rank": 97,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 1
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "SA",
+      "rank": 98,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "data-theft",
+        "hijacking-with-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "SV",
+      "rank": 99,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "TH",
+      "rank": 100,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "hijacking-with-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "TJ",
+      "rank": 101,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "data-theft",
+        "hijacking-with-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "TM",
+      "rank": 102,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "data-theft",
+        "hijacking-with-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "UG",
+      "rank": 103,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "disruption"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 1
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "UZ",
+      "rank": 104,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "data-theft",
+        "hijacking-with-misuse"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "VG",
+      "rank": 105,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 1
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 0
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    },
+    {
+      "countryCode": "XK",
+      "rank": 106,
+      "reportedIncidents": 1,
+      "retainedIncidents": 1,
+      "attackTypeIds": [
+        "disruption"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 0
+        },
+        {
+          "month": "2024-02",
+          "count": 0
+        },
+        {
+          "month": "2024-03",
+          "count": 0
+        },
+        {
+          "month": "2024-04",
+          "count": 0
+        },
+        {
+          "month": "2024-05",
+          "count": 1
+        },
+        {
+          "month": "2024-06",
+          "count": 0
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 0
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 1,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 0.08333333333333333
+    }
+  ],
+  "countries": [
+    {
+      "countryCode": "US",
+      "rank": 1,
+      "reportedIncidents": 177,
+      "retainedIncidents": 50,
+      "attackTypeIds": [
+        "data-theft",
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 32
+        },
+        {
+          "month": "2024-02",
+          "count": 17
+        },
+        {
+          "month": "2024-03",
+          "count": 12
+        },
+        {
+          "month": "2024-04",
+          "count": 19
+        },
+        {
+          "month": "2024-05",
+          "count": 13
+        },
+        {
+          "month": "2024-06",
+          "count": 11
+        },
+        {
+          "month": "2024-07",
+          "count": 13
+        },
+        {
+          "month": "2024-08",
+          "count": 22
+        },
+        {
+          "month": "2024-09",
+          "count": 9
+        },
+        {
+          "month": "2024-10",
+          "count": 11
+        },
+        {
+          "month": "2024-11",
+          "count": 13
+        },
+        {
+          "month": "2024-12",
+          "count": 5
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 177,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 14.75
+    },
+    {
+      "countryCode": "FR",
+      "rank": 2,
+      "reportedIncidents": 52,
+      "retainedIncidents": 50,
+      "attackTypeIds": [
+        "data-theft",
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 6
+        },
+        {
+          "month": "2024-02",
+          "count": 4
+        },
+        {
+          "month": "2024-03",
+          "count": 4
+        },
+        {
+          "month": "2024-04",
+          "count": 6
+        },
+        {
+          "month": "2024-05",
+          "count": 4
+        },
+        {
+          "month": "2024-06",
+          "count": 4
+        },
+        {
+          "month": "2024-07",
+          "count": 2
+        },
+        {
+          "month": "2024-08",
+          "count": 7
+        },
+        {
+          "month": "2024-09",
+          "count": 4
+        },
+        {
+          "month": "2024-10",
+          "count": 5
+        },
+        {
+          "month": "2024-11",
+          "count": 5
+        },
+        {
+          "month": "2024-12",
+          "count": 1
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 52,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 4.333333333333333
+    },
+    {
+      "countryCode": "DE",
+      "rank": 3,
+      "reportedIncidents": 51,
+      "retainedIncidents": 50,
+      "attackTypeIds": [
+        "data-theft",
+        "disruption",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse",
+        "not-available",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 6
+        },
+        {
+          "month": "2024-02",
+          "count": 11
+        },
+        {
+          "month": "2024-03",
+          "count": 4
+        },
+        {
+          "month": "2024-04",
+          "count": 2
+        },
+        {
+          "month": "2024-05",
+          "count": 2
+        },
+        {
+          "month": "2024-06",
+          "count": 3
+        },
+        {
+          "month": "2024-07",
+          "count": 5
+        },
+        {
+          "month": "2024-08",
+          "count": 2
+        },
+        {
+          "month": "2024-09",
+          "count": 5
+        },
+        {
+          "month": "2024-10",
+          "count": 6
+        },
+        {
+          "month": "2024-11",
+          "count": 3
+        },
+        {
+          "month": "2024-12",
+          "count": 2
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 51,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 4.25
+    },
+    {
+      "countryCode": "RU",
+      "rank": 4,
+      "reportedIncidents": 27,
+      "retainedIncidents": 27,
+      "attackTypeIds": [
+        "data-theft",
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 5
+        },
+        {
+          "month": "2024-02",
+          "count": 2
+        },
+        {
+          "month": "2024-03",
+          "count": 1
+        },
+        {
+          "month": "2024-04",
+          "count": 2
+        },
+        {
+          "month": "2024-05",
+          "count": 4
+        },
+        {
+          "month": "2024-06",
+          "count": 2
+        },
+        {
+          "month": "2024-07",
+          "count": 4
+        },
+        {
+          "month": "2024-08",
+          "count": 4
+        },
+        {
+          "month": "2024-09",
+          "count": 1
+        },
+        {
+          "month": "2024-10",
+          "count": 2
+        },
+        {
+          "month": "2024-11",
+          "count": 0
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 27,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 2.25
+    },
+    {
+      "countryCode": "GB",
+      "rank": 5,
+      "reportedIncidents": 26,
+      "retainedIncidents": 26,
+      "attackTypeIds": [
+        "data-theft",
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 3
+        },
+        {
+          "month": "2024-02",
+          "count": 1
+        },
+        {
+          "month": "2024-03",
+          "count": 2
+        },
+        {
+          "month": "2024-04",
+          "count": 1
+        },
+        {
+          "month": "2024-05",
+          "count": 2
+        },
+        {
+          "month": "2024-06",
+          "count": 3
+        },
+        {
+          "month": "2024-07",
+          "count": 3
+        },
+        {
+          "month": "2024-08",
+          "count": 3
+        },
+        {
+          "month": "2024-09",
+          "count": 6
+        },
+        {
+          "month": "2024-10",
+          "count": 0
+        },
+        {
+          "month": "2024-11",
+          "count": 1
+        },
+        {
+          "month": "2024-12",
+          "count": 1
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 26,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 2.1666666666666665
+    },
+    {
+      "countryCode": "ES",
+      "rank": 6,
+      "reportedIncidents": 23,
+      "retainedIncidents": 23,
+      "attackTypeIds": [
+        "data-theft",
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 4
+        },
+        {
+          "month": "2024-02",
+          "count": 2
+        },
+        {
+          "month": "2024-03",
+          "count": 3
+        },
+        {
+          "month": "2024-04",
+          "count": 2
+        },
+        {
+          "month": "2024-05",
+          "count": 1
+        },
+        {
+          "month": "2024-06",
+          "count": 3
+        },
+        {
+          "month": "2024-07",
+          "count": 1
+        },
+        {
+          "month": "2024-08",
+          "count": 1
+        },
+        {
+          "month": "2024-09",
+          "count": 4
+        },
+        {
+          "month": "2024-10",
+          "count": 1
+        },
+        {
+          "month": "2024-11",
+          "count": 1
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 23,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 1.9166666666666667
+    },
+    {
+      "countryCode": "CA",
+      "rank": 7,
+      "reportedIncidents": 20,
+      "retainedIncidents": 20,
+      "attackTypeIds": [
+        "data-theft",
+        "disruption",
+        "hijacking-with-misuse",
+        "hijacking-without-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 4
+        },
+        {
+          "month": "2024-02",
+          "count": 3
+        },
+        {
+          "month": "2024-03",
+          "count": 2
+        },
+        {
+          "month": "2024-04",
+          "count": 3
+        },
+        {
+          "month": "2024-05",
+          "count": 1
+        },
+        {
+          "month": "2024-06",
+          "count": 2
+        },
+        {
+          "month": "2024-07",
+          "count": 0
+        },
+        {
+          "month": "2024-08",
+          "count": 1
+        },
+        {
+          "month": "2024-09",
+          "count": 0
+        },
+        {
+          "month": "2024-10",
+          "count": 1
+        },
+        {
+          "month": "2024-11",
+          "count": 1
+        },
+        {
+          "month": "2024-12",
+          "count": 2
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 20,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 1.6666666666666667
+    },
+    {
+      "countryCode": "IT",
+      "rank": 8,
+      "reportedIncidents": 17,
+      "retainedIncidents": 17,
+      "attackTypeIds": [
+        "data-theft",
+        "data-theft-doxing",
+        "disruption",
+        "hijacking-with-misuse",
+        "ransomware"
+      ],
+      "monthly": [
+        {
+          "month": "2024-01",
+          "count": 4
+        },
+        {
+          "month": "2024-02",
+          "count": 1
+        },
+        {
+          "month": "2024-03",
+          "count": 1
+        },
+        {
+          "month": "2024-04",
+          "count": 1
+        },
+        {
+          "month": "2024-05",
+          "count": 1
+        },
+        {
+          "month": "2024-06",
+          "count": 1
+        },
+        {
+          "month": "2024-07",
+          "count": 2
+        },
+        {
+          "month": "2024-08",
+          "count": 1
+        },
+        {
+          "month": "2024-09",
+          "count": 2
+        },
+        {
+          "month": "2024-10",
+          "count": 2
+        },
+        {
+          "month": "2024-11",
+          "count": 1
+        },
+        {
+          "month": "2024-12",
+          "count": 0
+        }
+      ],
+      "frequencyStatus": "monthly",
+      "undatedForMonthlyCount": 0,
+      "monthlyNumerator": 17,
+      "coveredMonthCount": 12,
+      "monthlyAverage": 1.4166666666666667
+    }
+  ]
+}

@@ -117,10 +117,11 @@ test("all twelve actor explainers reuse the single registry with complete offici
 test("static interaction contract includes semantic links, keyboard, cleanup and reduced motion", async () => {
 	const card = await readFile("src/components/cyber/threat-actors/ActorLedgerPanel.astro", "utf8");
 	const controller = await readFile("src/scripts/threat-actor-tracking.ts", "utf8");
+	const navigation = await readFile("src/lib/cyber/observatory-navigation.ts", "utf8");
 	const css = await readFile("src/styles/threat-actors.css", "utf8");
 	const shell = await readFile("src/components/cyber/ObservatoryShell.astro", "utf8");
 	assert.match(card, /<a href=\{actorHash/); assert.match(card, /aria-label=\{`Open dossier/);
-	assert.match(controller, /event.key === " "/); assert.match(controller, /hashchange/); assert.match(controller, /returnFocus.focus/);
+	assert.match(controller, /event.key === " "/); assert.match(navigation, /hashchange/); assert.match(controller, /returnFocus.focus/);
 	assert.match(controller, /lifecycle.abort/); assert.match(css, /prefers-reduced-motion: reduce/); assert.match(css, /animation: none !important/);
 	assert.match(card, /role="tabpanel"/); assert.match(controller, /"ArrowLeft", "ArrowRight", "Home", "End"/);
 	assert.equal((shell.match(/<CommandPalette/g) ?? []).length, 1); assert.equal((shell.match(/<ExplainerPopover/g) ?? []).length, 1);

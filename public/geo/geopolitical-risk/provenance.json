@@ -1,0 +1,9 @@
+{
+  "source": "Natural Earth Admin 0, 1:110m",
+  "version": "v5.1.2 repository tag",
+  "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_110m_admin_0_countries.geojson",
+  "sha256": "6866c877d39cba9c357620878839b336d569f8c662d3cfab4cb1dbe2d39c977f",
+  "license": "Public domain",
+  "features": 177,
+  "treatment": "Union of land polygons with holes at 0.5 degrees. No political borders are drawn. Natural Earth de facto geography is context; representative positions are not incident coordinates."
+}
