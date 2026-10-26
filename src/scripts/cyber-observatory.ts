@@ -7,11 +7,12 @@ import { groupByYear, rankByLabel, rankCwes } from "../lib/cyber/aggregate-vulne
 import { filterVulnerabilities } from "../lib/cyber/filter-vulnerabilities";
 import type { KevDataset, ObservatoryVulnerability, TimelineRange, VulnerabilityFilters } from "../types/cyber";
 
+import { initMalwareAnalysis } from "./malware-analysis";
 const root = document.querySelector<HTMLElement>("[data-observatory]");
 const dataset = datasetJson as KevDataset;
 
 if (root && dataset) {
-	const actorNavigation = initObservatoryNavigation(root, initThreatActorTracking(root), initGeopoliticalRisk(root));
+	const actorNavigation = initObservatoryNavigation(root, initThreatActorTracking(root), initGeopoliticalRisk(root), initMalwareAnalysis(root));
 	const records = dataset.vulnerabilities;
 	const byId = new Map(records.map((record) => [record.id, record]));
 	const datasetNow = new Date(dataset.metadata.dateReleased);

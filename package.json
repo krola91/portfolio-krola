@@ -17,7 +17,9 @@
     "data:update:geopolitics": "node --experimental-strip-types src/scripts/update-geopolitics.ts",
     "data:check:geopolitics": "node --experimental-strip-types src/scripts/check-geopolitics.ts",
     "data:prepare:geopolitics": "node --experimental-strip-types src/scripts/prepare-geopolitical-geometry.ts",
-    "test": "node --experimental-strip-types --test tests/cyber/domain.test.ts tests/cyber/explainers.test.ts tests/cyber/threat-actors.test.ts tests/cyber/geopolitical-risk.test.ts"
+    "data:check:malware": "node --experimental-strip-types src/scripts/check-malware.ts",
+    "data:prepare:malware": "node --experimental-strip-types src/scripts/prepare-malware-artwork.ts && node --experimental-strip-types src/scripts/prepare-malware-specimens.ts",
+    "test": "node --experimental-strip-types --test tests/cyber/domain.test.ts tests/cyber/explainers.test.ts tests/cyber/threat-actors.test.ts tests/cyber/geopolitical-risk.test.ts tests/cyber/malware-analysis.test.ts"
   },
   "dependencies": {
     "@fontsource-variable/josefin-sans": "^5.3.0",

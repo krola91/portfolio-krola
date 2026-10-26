@@ -19,10 +19,12 @@ const released = new Intl.DateTimeFormat("en", { dateStyle: "medium", timeStyle:
 		<span class="status-pulse is-verified" data-source-module="actors"><i aria-hidden="true"></i>curated</span>
 		<span class:list={["status-pulse", `is-${health}`]} data-source-module="vulnerabilities" hidden><i aria-hidden="true"></i>{health}</span>
 		<span class="status-pulse is-verified" data-source-module="geopolitics" hidden><i aria-hidden="true"></i>historical</span>
+		<span class="status-pulse is-verified" data-source-module="malware" hidden><i aria-hidden="true"></i>curated</span>
 		<span class="utc-clock" data-utc-clock>UTC --:--:--</span>
 		<a class="source-flag" data-source-module="actors" href="#actors-sources">ActorDex · {actors.total} curated profiles · reviewed {actors.lastVerified} UTC</a>
 		<a class="source-flag" data-source-module="vulnerabilities" hidden href={metadata.sourceUrl} target="_blank" rel="noopener noreferrer">CISA KEV · official snapshot · {metadata.catalogVersion} · {metadata.validCount} records · {released}</a>
 		<a class="source-flag" data-source-module="geopolitics" hidden href={geoMetadata.sourceUrl} target="_blank" rel="noopener noreferrer">EuRepoC {geoMetadata.version} · research dataset · through {geoMetadata.coverage.year}</a>
+		<a class="source-flag" data-source-module="malware" hidden href="#malware-about" data-malware-about-link>Malware Atlas · 10 historical cases · reviewed 2026-10-26 UTC</a>
 	</div>
 	<div class="obs-header__actions">
 		<button class="command-trigger" type="button" data-command-open aria-haspopup="dialog"><span>Command</span><kbd>⌘ K</kbd></button>

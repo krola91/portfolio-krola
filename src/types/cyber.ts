@@ -106,7 +106,7 @@ export type LandscapeSignal = {
 	dominantVendors: string[];
 };
 
-export type ObservatoryModuleKey = "actors" | "vulnerabilities" | "geopolitics";
+export type ObservatoryModuleKey = "actors" | "vulnerabilities" | "geopolitics" | "malware";
 export type ObservatoryModule = {
 	key?: ObservatoryModuleKey;
 	index: string;
